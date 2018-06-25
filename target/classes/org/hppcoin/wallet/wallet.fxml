@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.WorldMapView?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.WalletController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="800.0" prefWidth="251.0" style="-fx-background-color: #2D3443;">
+         <children>
+            <Label prefHeight="68.0" prefWidth="251.0" style="-fx-background-color: #32b8e0;" text="HPP Core" textFill="WHITE">
+               <font>
+                  <Font name="Beirut Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox onMouseClicked="#showDashboard" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Label text="Dashboard" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showMyVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#11d9b9" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showRentedVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="SERVER" selectionFill="#103ec6" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My Contracts" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showFindVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DATABASE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label styleClass="menu-item" text="Find VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showWallet" prefHeight="40.0" prefWidth="299.0">
+               <children>
+                  <FontAwesomeIcon fill="#16baac" glyphName="MONEY" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Wallet" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="menu-item" />
+                  <String fx:value="active" />
+               </styleClass>
+            </HBox>
+            <HBox onMouseClicked="#showGlobalStats" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GLOBE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Global Statistics" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showNotifications" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="BELL" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Notifications" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showSettings" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Settings" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="358.0" onMouseClicked="#showXenServers" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#b58b55" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Xen Servers" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="251.0" minHeight="900.0" prefHeight="900.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="67.0" prefWidth="1000.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="4.0" text="Wallet" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXTabPane minHeight="600.0" minWidth="1000.0" prefWidth="1000.0">
+               <tabs>
+                  <Tab fx:id="overviewTab" onSelectionChanged="#updateOverviewUI" style="-fx-background-color: #15ab9c;" text="Overview">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox layoutX="1.0" maxWidth="250.0" minWidth="300.0" prefHeight="224.0" prefWidth="300.0" style="-fx-border-width: 2; -fx-border-color: #3c3939#3c3939;" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label text="Balance" textFill="#3c3939">
+                                       <font>
+                                          <Font name="Beirut Regular" size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Available" textFill="#3c3939">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="available" alignment="CENTER" layoutX="30.0" layoutY="30.0" textFill="#3c3939">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Pending" textFill="#3c3939">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="pending" layoutX="30.0" layoutY="30.0" textFill="#3c3939">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="25.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="250.0">
+                                       <children>
+                                          <Separator prefWidth="200.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Separator>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Total" textFill="#3c3939">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="total" layoutX="30.0" layoutY="30.0" textFill="#3c3939">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="47.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="289.0" layoutY="18.0" minWidth="500.0" prefHeight="200.0" prefWidth="500.0" style="-fx-border-width: 2; -fx-border-color: #3c3939#3c3939;" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label text="Recent Transactions" textFill="#3c3939">
+                                       <font>
+                                          <Font name="Beirut Regular" size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f1" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d1" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am1" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad1" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="20.0" minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f2" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d2" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am2" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad2" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="20.0" minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f3" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d3" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am3" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad3" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="120.0" minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f4" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d4" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am4" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad4" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="163.0" minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f5" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d5" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am5" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad5" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="196.0" minWidth="500.0" prefHeight="50.0" prefWidth="500.0">
+                                       <children>
+                                          <FontAwesomeIcon fx:id="f6" fill="WHITE" glyphName="LOVE" size="2em">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox minWidth="500.0" prefHeight="100.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label fx:id="d6" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="am6" text=" " textFill="#3c3939">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Label fx:id="ad6" text=" " textFill="#3c3939">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="sendTab" onSelectionChanged="#updateSendUI" style="-fx-background-color: #15ab9c;" text="Send">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="322.0" prefWidth="605.0">
+                                 <children>
+                                    <JFXTextField fx:id="payTo" layoutX="45.0" layoutY="26.0" prefHeight="27.0" prefWidth="361.0" promptText="Pay To" unFocusColor="#14ab9e">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="amount" layoutX="45.0" layoutY="73.0" prefHeight="27.0" prefWidth="277.0" promptText="Amount " unFocusColor="#14ab9e">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXButton fx:id="sendButton" layoutX="45.0" layoutY="159.0" onAction="#send" prefHeight="27.0" prefWidth="171.0" ripplerFill="WHITE" text="Send">
+                                       <styleClass>
+                                          <String fx:value="addBobOk" />
+                                          <String fx:value="focus" />
+                                       </styleClass>
+                                    </JFXButton>
+                                    <Separator layoutX="45.0" layoutY="131.0" prefHeight="7.0" prefWidth="560.0" />
+                                    <Label fx:id="balanceSend" layoutX="365.0" layoutY="164.0" text="Balance : ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="errorAddress" layoutX="425.0" layoutY="45.0" minWidth="138.0" textFill="#e10a0a" />
+                                    <Label fx:id="errorAmount" layoutX="348.0" layoutY="92.0" minWidth="108.0" textFill="#e10a0a" />
+                                    <FontAwesomeIcon fx:id="check" fill="#15ab9c" glyphName="CHECK" layoutX="50.0" layoutY="242.0" size="1.5em" />
+                                    <Hyperlink fx:id="txidSend" layoutX="88.0" layoutY="223.0" prefHeight="25.0" prefWidth="515.0" text="Hyperlink">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Hyperlink>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="receiveTab" onSelectionChanged="#updateReceiveUI" style="-fx-background-color: #15ab9c;" text="Receive">
+                    <content>
+                      <AnchorPane minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0">
+                           <children>
+                              <ImageView fx:id="qrcode" fitHeight="360.0" fitWidth="360.0" layoutX="81.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+                              <JFXTextField fx:id="newAddress" editable="false" layoutX="80.0" layoutY="423.0" prefHeight="27.0" prefWidth="361.0" style="-fx-background-color: cdcdcdcdcdcd;" unFocusColor="#cdcdcd">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton layoutX="459.0" layoutY="423.0" onAction="#generateNew" style="-fx-background-color: #15ab9c#15ab9c;" text="New address" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="transactionsTab" onSelectionChanged="#updateTransactionsUI" style="-fx-background-color: #15ab9c;" text="Transactions">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="lmnMapTab" onSelectionChanged="#updateLMNodeUI" style="-fx-background-color: #15ab9c;" text="LMNmap">
+                    <content>
+                      <AnchorPane minHeight="600.0" minWidth="700.0" prefHeight="669.0" prefWidth="700.0">
+                           <children>
+                              <WorldMapView fx:id="map" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="lmNodesTab" onSelectionChanged="#updateLMNodeTableUI" style="-fx-background-color: #15ab9c;" text="LMNodes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children></VBox>
+   </children>
+</AnchorPane>

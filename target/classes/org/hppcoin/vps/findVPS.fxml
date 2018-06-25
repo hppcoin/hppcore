@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.FindVPSController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="800.0" prefWidth="251.0" style="-fx-background-color: #2D3443;">
+         <children>
+            <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #32b8e0;" text="HPP Core" textFill="WHITE">
+               <font>
+                  <Font name="Beirut Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox onMouseClicked="#showDashboard" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Label text="Dashboard" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showMyVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#11d9b9" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showRentedVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="SERVER" selectionFill="#103ec6" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My Contracts" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showFindVPS" prefHeight="40.0" prefWidth="299.0">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="DATABASE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label styleClass="menu-item" text="Find VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="menu-item" />
+                  <String fx:value="active" />
+               </styleClass>
+            </HBox>
+            <HBox onMouseClicked="#showWallet" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#16baac" glyphName="MONEY" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Wallet" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showGlobalStats" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GLOBE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Global Statistics" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showNotifications" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="BELL" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Notifications" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showSettings" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Settings" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="365.0" onMouseClicked="#showXenServers" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#b58b55" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Xen Servers" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="252.0" layoutY="-1.0" prefHeight="800.0" prefWidth="398.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" text="Find Virtual Private Server" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane minWidth="600.0" prefHeight="245.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #1477e1;">
+               <children>
+                  <Slider fx:id="cpuSlider" blockIncrement="1.0" layoutX="83.0" layoutY="59.0" majorTickUnit="5.0" max="128.0" min="1.0" minorTickCount="1" prefHeight="40.0" prefWidth="391.0" showTickLabels="true" showTickMarks="true" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" value="1.0" />
+                  <Slider fx:id="memorySlider" blockIncrement="128.0" layoutX="85.0" layoutY="123.0" majorTickUnit="1000.0" max="202400.0" min="128.0" minorTickCount="128" prefHeight="40.0" prefWidth="391.0" showTickLabels="true" showTickMarks="true" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" value="128.0" />
+                  <Slider fx:id="hdSlider" blockIncrement="50.0" layoutX="84.0" layoutY="192.0" majorTickUnit="1000.0" max="102400.0" min="5.0" minorTickCount="50" prefHeight="40.0" prefWidth="391.0" showTickLabels="true" showTickMarks="true" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" value="1.0" />
+                  <Label layoutX="15.0" layoutY="65.0" text="vCPUs">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="129.0" text="Memory">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="19.0" layoutY="198.0" text="HD">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></Label>
+                  <Label fx:id="cpuLbl" layoutX="500.0" layoutY="65.0" prefHeight="17.0" prefWidth="98.0" text="1">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <Label fx:id="memoryLbl" layoutX="497.0" layoutY="129.0" prefHeight="17.0" prefWidth="98.0" text="128 MB">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <Label fx:id="hdLbl" layoutX="496.0" layoutY="198.0" prefHeight="17.0" prefWidth="98.0" text="5 GB">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="251.0" layoutY="14.0" text="Search form" textFill="#1477e1">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="608.0" text="List of available VPS " textFill="#1477e1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <JFXProgressBar fx:id="progress" prefHeight="0.0" prefWidth="606.0" visible="false" />
+            <TableView fx:id="vpsTable" prefHeight="200.0" prefWidth="200.0" />
+         </children></VBox>
+   </children>
+</AnchorPane>

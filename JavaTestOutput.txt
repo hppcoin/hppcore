@@ -1,0 +1,23 @@
+RunTests.java: test run started at Tue Jun 12 19:09:01 WET 2018
+^^^ VMlifecycle starting ^^^
+logging in to '37.59.46.162'...
+Success! Session API version is Unknown
+We're cloning: VPSUbuntu16 to Cloned by VMlifecycle.java
+VM Name: VPSUbuntu16 Description: 
+
+VM powerstate: Running
+VM powerstate: Halted
+VM powerstate: Paused
+VM powerstate: Running
+disposing connection for 37.59.46.162
+VM_LACKS_FEATUREOpaqueRef:f30c4d7b-0dda-403a-baff-1ebec05a7f8f
+	at com.xensource.xenapi.Types.checkResponse(Types.java:2021)
+	at com.xensource.xenapi.Connection.dispatch(Connection.java:395)
+	at com.xensource.xenapi.VM.suspend(VM.java:3538)
+	at org.hppcoin.test.xenSamples.VMlifecycle.TestCore(VMlifecycle.java:92)
+	at org.hppcoin.test.xenSamples.TestBase.RunTest(TestBase.java:57)
+	at org.hppcoin.test.xenSamples.RunTests.main(RunTests.java:95)
+
+^^^ VMlifecycle Failed ^^^
+0 succeeded, 0 skipped, 1 failed, 1 total
+RunTests.java: test run finished at Tue Jun 12 19:09:12 WET 2018

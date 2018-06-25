@@ -1,0 +1,186 @@
+/*
+ * HPPCOIN License
+ * 
+ * Copyright (c) 2017-2018, HPPCOIN Developers.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 
+ * Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
+ * to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ * ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
+ * THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+ 
+ /*
+  * HPP Green : #15ab9c    rgb(21,171,156)
+  * HPP Blue Sky  #32b8e0  rgb(50,184,224)
+  * HPP Black : #3c3939    rgb(60,57,57)
+  * HPP RED : #e10a0a      rgb(225,10,10)
+  * HPP GRAY #CCDDEE       rgb(204,221,238)
+  *  PAUSE 			       rgb(171, 202, 188);
+  */
+ 
+ * {
+ 	-fx-primary:#32b8e0;
+ 	
+ }
+ .root{
+ 	-fx-background-color: #2D3443;
+ 	-fx-font-family: beirut;
+
+ }
+ .menu-item{
+ 	-fx-background-color: transparent;
+
+ }
+  .menu-item:hover{
+ 	-fx-background-color: #202332;
+
+ }
+ .active{
+ 	-fx-background-color: #202332;
+
+ }
+ .cancel{
+ 	-fx-background-color:  #15ab9c;
+ 	-fx-border-radius: 20px;
+ 	-fx-padding: 10px;
+ -fx-spacing: 10px;
+ }
+ .close{
+ 	-fx-background-color:  #ff4500;
+ 	-fx-border-radius: 20px;
+ 	-fx-padding: 10px;
+ 	-fx-spacing: 10px;
+
+ }
+ .box{
+ 	-fx-border-color: #3B3F4B;
+ 	-fx-border-width: 1px 0px 0px 0px; 
+ }
+ 
+ .buttonStyleHpp{
+        -fx-background-color:#15ab9c;
+        -fx-background-radius: 5,5,4;
+        -fx-background-insets: 0 0 -1 0,0,1;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+        -fx-text-alignment: center;
+}
+.buttonStyleHpp:hover{
+
+        -fx-background-color:#15ab90;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+        -fx-text-alignment: center;
+}
+.busy{
+
+        -fx-background-color:#B3B3B3; 
+        -fx-text-alignment: center;
+}
+.busy:hover{
+
+        -fx-background-color:#cdcbcb;                       
+        -fx-text-alignment: center;
+}
+
+.world-map .country1 {
+    -fx-fill: #E93087;
+}
+
+.world-map .country2 {
+    -fx-fill: #E8142D;
+}
+
+.world-map .country3 {
+    -fx-fill: #FF756B;
+}
+
+.world-map .country4 {
+    -fx-fill: #E86F55;
+}
+
+.world-map .country5 {
+    -fx-fill: #FF895C;
+}
+
+.world-map .country6 {
+    -fx-fill: #FFDBAF;
+}
+
+.world-map .country7 {
+    -fx-fill: #E89E53;
+}
+
+.world-map .country8 {
+    -fx-fill: #BD895D;
+}
+.table-view{
+    /*-fx-background-color: transparent;*/
+ }
+
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
+}
+
+
+
+.table-view .column-header {
+     -fx-background-color: transparent;
+} 
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0.0%, #424141 100.0%);
+}
+
+.table-view .column-header-background .label{
+     -fx-background-color: transparent; 
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+ 
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:14px;           
+   -fx-font-family:Arial;
+
+}
+
+
+
+/* .table-row-cell{
+    -fx-background-color: white;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:odd{
+    -fx-background-color: orange;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;  
+}
+*/
+
+.table-row-cell:selected {
+   /* -fx-border-color:transparent firebrick transparent firebrick  ;
+    -fx-border-width:2.0; */
+}
+
+
+.table-row-cell:hover {
+    -fx-background-color:#bac9aE;
+}
+
+.table-row-cell:focused {
+    -fx-background-color:#bEE9aE;
+}

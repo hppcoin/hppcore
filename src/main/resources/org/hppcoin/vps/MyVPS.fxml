@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.MyVPSController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="800.0" prefWidth="251.0" style="-fx-background-color: #2D3443;">
+         <children>
+            <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #32b8e0;" text="HPP Core" textFill="WHITE">
+               <font>
+                  <Font name="Beirut Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox onMouseClicked="#showDashboard" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Label text="Dashboard" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showMyVPS" prefHeight="40.0" prefWidth="299.0">
+               <children>
+                  <FontAwesomeIcon fill="#11d9b9" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="menu-item" />
+                  <String fx:value="active" />
+               </styleClass>
+            </HBox>
+            <HBox onMouseClicked="#showRentedVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="SERVER" selectionFill="#103ec6" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My Contracts" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showFindVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="DATABASE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label styleClass="menu-item" text="Find VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showWallet" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#16baac" glyphName="MONEY" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Wallet" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showGlobalStats" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GLOBE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Global Statistics" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showNotifications" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="BELL" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Notifications" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox onMouseClicked="#showSettings" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Settings" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="365.0" onMouseClicked="#showXenServers" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#b58b55" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Xen Servers" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="252.0" layoutY="-1.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="43.0" prefWidth="691.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="7.0" text="My VPS List" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXTabPane minHeight="700.0" minWidth="700.0">
+               <tabs>
+                  <Tab style="-fx-background-color: #b58b55;" text="Xen VPS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <Pane minHeight="297.0" minWidth="400.0" prefHeight="297.0" prefWidth="680.0" style="-fx-border-width: 2; -fx-border-color: #b58b55#b58b55;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <JFXTextField fx:id="ip" layoutX="34.0" layoutY="113.0" prefHeight="27.0" prefWidth="330.0" promptText="IP Address" unFocusColor="#b58b55">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="username" layoutX="34.0" layoutY="155.0" prefHeight="27.0" prefWidth="330.0" promptText="User" unFocusColor="#b58b55">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXButton layoutX="128.0" layoutY="257.0" onAction="#createVPS" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #b58b55;" text="Create Xen VPS">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXComboBox fx:id="vms" layoutX="34.0" layoutY="71.0" prefHeight="28.0" prefWidth="332.0" promptText="Xen Virtual Machine" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" unFocusColor="#b58b55" />
+                                    <JFXComboBox fx:id="servers" focusColor="#5457b2" layoutX="34.0" layoutY="25.0" prefHeight="27.0" prefWidth="232.0" promptText="Xen Server" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" unFocusColor="#b58b55" />
+                                    <Button fx:id="okButton" layoutX="21.0" layoutY="257.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transaparent;" />
+                                    <FontAwesomeIcon fx:id="ok" disable="true" fill="#15ab9c" glyphName="CHECK" layoutX="50.0" layoutY="275.0" size="2em" visible="false" />
+                                    <JFXPasswordField fx:id="password" layoutX="34.0" layoutY="203.0" prefHeight="27.0" prefWidth="329.0" promptText="Password" unFocusColor="#b58b55">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                    <JFXComboBox fx:id="paymentInterval" layoutX="403.0" layoutY="204.0" prefHeight="27.0" prefWidth="163.0" promptText="Payment interval" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" unFocusColor="#b58b55" />
+                                    <JFXTextField fx:id="hourlyPrice" layoutX="403.0" layoutY="156.0" promptText="Hourly Price" unFocusColor="#b58b55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="setupFees" layoutX="402.0" layoutY="113.0" promptText="Setup fees" unFocusColor="#b58b55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXProgressBar fx:id="vmProgress" layoutX="403.0" layoutY="98.0" prefHeight="3.0" prefWidth="166.0" visible="false" />
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="vpsTable" layoutX="10.0" layoutY="409.0" prefHeight="400.0" AnchorPane.bottomAnchor="-89.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="409.0">
+                                <columns>
+                                    <TableColumn minWidth="0.0" prefWidth="0.0" text="Memory" />
+                                </columns>
+                              </TableView>
+                              <Pane layoutX="10.0" layoutY="310.0" prefHeight="51.0" prefWidth="681.0" style="-fx-border-width: 2; -fx-border-color: #15ab9c;">
+                                 <children>
+                                    <Label layoutX="316.0" layoutY="1.0" text="Filters" textFill="#15ab9c" />
+                                    <JFXComboBox fx:id="powerState" layoutX="6.0" layoutY="9.0" onAction="#filterPowerState" prefHeight="28.0" prefWidth="156.0" promptText="Power State" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" />
+                                    <JFXComboBox fx:id="rentingStatus" layoutX="502.0" layoutY="7.0" onAction="#filterVPSStatus" prefHeight="28.0" prefWidth="174.0" promptText="VPS Status" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" />
+                                    <Slider fx:id="cpuSlider" blockIncrement="1.0" layoutX="218.0" layoutY="15.0" majorTickUnit="5.0" max="128.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="251.0" showTickLabels="true" showTickMarks="true" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" value="1.0" />
+                                    <Label layoutX="168.0" layoutY="15.0" text="vCPUs" textFill="#4d4d4d">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cpuLbl" layoutX="475.0" layoutY="16.0" text="1" textFill="#4d4d4d">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="371.0" prefHeight="17.0" prefWidth="678.0" text="My VPS List" textFill="#11d9b9" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="12.0">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #15ab9c;" text="Manually managed VPS">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="12.0" minHeight="204.0" minWidth="400.0" prefHeight="204.0" prefWidth="682.0" style="-fx-border-width: 2; -fx-border-color: #15ab9c;">
+                                 <children>
+                                    <JFXTextField fx:id="ip1" layoutX="34.0" layoutY="18.0" prefHeight="27.0" prefWidth="330.0" promptText="IP Address" unFocusColor="#15ab9c">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="username1" layoutX="34.0" layoutY="60.0" prefHeight="27.0" prefWidth="330.0" promptText="User" unFocusColor="#15ab9c">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="password1" layoutX="34.0" layoutY="103.0" prefHeight="27.0" prefWidth="330.0" promptText="Password" unFocusColor="#15ab9c">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXButton layoutX="128.0" layoutY="157.0" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #15ab9c#15ab9c;" text="Add VPS">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXComboBox fx:id="paymentInterval1" layoutX="414.0" layoutY="105.0" prefHeight="27.0" prefWidth="168.0" promptText="Payment interval" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" unFocusColor="#15ab9c" />
+                                    <JFXTextField fx:id="hourlyPrice1" layoutX="417.0" layoutY="60.0" prefHeight="28.0" prefWidth="167.0" promptText="Hourly Price ex : 0.05" unFocusColor="#15ab9c">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="setupFees1" layoutX="418.0" layoutY="17.0" promptText="Setup fees ex : 50.67" unFocusColor="#15ab9c">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </Pane>
+                              <TableView layoutX="10.0" layoutY="265.0" prefHeight="388.0" prefWidth="657.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="265.0" />
+                              <Pane layoutX="11.0" layoutY="206.0" prefHeight="51.0" prefWidth="681.0" style="-fx-border-width: 2; -fx-border-color: #15ab9c;">
+                                 <children>
+                                    <Label layoutX="316.0" layoutY="1.0" text="Filters" textFill="#15ab9c" />
+                                    <JFXComboBox fx:id="powerState1" layoutX="6.0" layoutY="9.0" prefHeight="28.0" prefWidth="157.0" promptText="Power State" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" />
+                                    <JFXComboBox fx:id="rentingStatus1" layoutX="507.0" layoutY="7.0" prefHeight="28.0" prefWidth="166.0" promptText="Renting Status" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" />
+                                    <Slider fx:id="cpuSlider1" blockIncrement="1.0" layoutX="220.0" layoutY="15.0" majorTickUnit="5.0" max="128.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="251.0" showTickLabels="true" showTickMarks="true" style="-fx-font-family-fx-font-family: Arial; -fx-font-size: 14;" value="1.0" />
+                                    <Label layoutX="170.0" layoutY="16.0" text="vCPUs" textFill="#4d4d4d">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cpuLbl1" layoutX="479.0" layoutY="16.0" text="1" textFill="#4d4d4d">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children></VBox>
+   </children>
+</AnchorPane>

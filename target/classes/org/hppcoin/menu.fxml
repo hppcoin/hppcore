@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox layoutY="-1.0" prefHeight="800.0" prefWidth="251.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.MenuControler">
+         <children>
+            <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #32b8e0;" text="HPP Core" textFill="WHITE">
+               <font>
+                  <Font name="Beirut Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox fx:id="dashboardMenu" onMouseClicked="#showDashboard" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Label text="Dashboard" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="myVPSMenu" onMouseClicked="#showMyVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#11d9b9" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="rentedVPSMenu" onMouseClicked="#showRentedVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="SERVER" selectionFill="#103ec6" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My Contracts" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="findVPSMenu" onMouseClicked="#showFindVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="DATABASE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label styleClass="menu-item" text="Find VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="walletMenu" onMouseClicked="#showWallet" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#16baac" glyphName="MONEY" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Wallet" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="globalStatsMenu" onMouseClicked="#showGlobalStats" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GLOBE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Global Statistics" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="NotificationsMenu" onMouseClicked="#showNotifications" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="BELL" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Notifications" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="settingsMenu" onMouseClicked="#showSettings" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Settings" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="365.0" onMouseClicked="#showXenServers" prefHeight="40.0" prefWidth="299.0" fx:id="xenServerMenu">
+               <children>
+                  <FontAwesomeIcon fill="#b58b55" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Xen Servers" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="menu-item" />
+                  <String fx:value="active" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>

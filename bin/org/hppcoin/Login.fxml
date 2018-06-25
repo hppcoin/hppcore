@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="373.0" layoutY="37.0" opacity="0.91" prefHeight="349.0" prefWidth="296.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTextField focusColor="#83e75c" layoutX="29.0" layoutY="86.0" prefHeight="27.0" prefWidth="238.0" promptText="Username" unFocusColor="#14ab9e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField layoutX="29.0" layoutY="155.0" prefHeight="27.0" prefWidth="238.0" promptText="Password" unFocusColor="#14ab9e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="login" layoutX="29.0" layoutY="202.0" onAction="#login" prefHeight="27.0" prefWidth="238.0" ripplerFill="#15ab9c" style="-fx-background-color: #14ab9e;" text="Login" wrapText="true" />
+            <JFXButton fx:id="passwordHint" layoutX="63.0" layoutY="270.0" onAction="#passwordHint" prefHeight="27.0" prefWidth="171.0" text="Need Password Hint ?" underline="true" />
+            <Label layoutX="116.0" layoutY="36.0" text="Sign In">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="305.0" fitWidth="443.0" layoutX="36.0" layoutY="48.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@about.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="669.0" text="X" textFill="#bc2828">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

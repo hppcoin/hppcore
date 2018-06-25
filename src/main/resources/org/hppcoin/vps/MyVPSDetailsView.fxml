@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.MyVPSDetailController">
+   <children>
+     <fx:include source="../menu.fxml" />
+      <VBox layoutX="252.0" layoutY="-1.0" prefHeight="800.0" prefWidth="654.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" prefHeight="29.0" prefWidth="330.0" text="Virtual Private Server Detail" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="thevpsStatus" layoutX="371.0" layoutY="14.0" minWidth="250.0" prefHeight="29.0" prefWidth="319.0" textFill="#e10a0a">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane minHeight="250.0" minWidth="600.0" prefHeight="250.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #b58b55#b58b55;">
+               <children>
+                  <JFXTextField fx:id="ip" layoutX="34.0" layoutY="31.0" prefHeight="27.0" prefWidth="330.0" promptText="IP Address" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="username" layoutX="34.0" layoutY="84.0" prefHeight="27.0" prefWidth="330.0" promptText="Username" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="modifyBtn" layoutX="170.0" layoutY="203.0" onAction="#modifyVPS" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #15ab9c#15ab9c;" text="Modify VPS">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXTextField fx:id="setupFees" layoutX="404.0" layoutY="31.0" promptText="Setup fees" unFocusColor="#15ab9c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIcon fx:id="shutdownIcn" fill="#e10a0a" glyphName="POWER_OFF" layoutX="524.0" layoutY="222.0" size="2em" />
+                  <FontAwesomeIcon fx:id="rebootIcn" accessibleText="Reboot" fill="#15ab9c" glyphName="ASTERISK" layoutX="465.0" layoutY="222.0" size="2em" />
+                  <JFXPasswordField fx:id="password" layoutX="34.0" layoutY="142.0" prefHeight="27.0" prefWidth="330.0" promptText="Password" unFocusColor="#15ab9c" />
+                  <JFXTextField fx:id="hourlyPrice" layoutX="405.0" layoutY="84.0" promptText="Hourly Price" unFocusColor="#15ab9c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIcon fx:id="startIcn" accessibleText="Reboot" fill="#32b8e0" glyphName="PLAY" layoutX="406.0" layoutY="222.0" size="2em" />
+                  <FontAwesomeIcon fx:id="deleteIcn" fill="#e10a0a" glyphName="TRASH_ALT" layoutX="580.0" layoutY="221.0" size="2em" />
+                  <JFXComboBox fx:id="paymentInterval" layoutX="406.0" layoutY="143.0" prefHeight="27.0" prefWidth="163.0" promptText="Payment interval" unFocusColor="#15ab9c" />
+                  <Button fx:id="startBtn" layoutX="387.0" layoutY="199.0" mnemonicParsing="false" onAction="#start" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="rebootBtn" layoutX="447.0" layoutY="197.0" mnemonicParsing="false" onAction="#reboot" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="shutdownBtn" layoutX="507.0" layoutY="198.0" mnemonicParsing="false" onAction="#shutdown" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="deleteBtn" layoutX="567.0" layoutY="197.0" mnemonicParsing="false" onAction="#delete" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <JFXTextField fx:id="sshPort" layoutX="584.0" layoutY="31.0" prefHeight="28.0" prefWidth="104.0" promptText="Ssh port" unFocusColor="#15ab9c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="payDelay" layoutX="586.0" layoutY="84.0" prefHeight="28.0" prefWidth="104.0" promptText="Max pay delay" unFocusColor="#15ab9c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXProgressBar fx:id="progress" layoutX="420.0" layoutY="234.0" prefHeight="3.0" prefWidth="215.0" visible="false" />
+                  <Button fx:id="okButton" disable="true" layoutX="5.0" layoutY="203.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: transaparent;" />
+                  <FontAwesomeIcon fx:id="ok" fill="#15ab9c" glyphName="CHECK" layoutX="34.0" layoutY="225.0" size="2em" visible="false" />
+               </children>
+            </Pane>
+            <HBox style="-fx-border-color: #000; -fx-border-width: 2;">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Creation time :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="creationTime" prefHeight="18.0" prefWidth="197.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Last access time :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lastAccessTime" prefHeight="18.0" prefWidth="204.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Total Suspended Contracts  :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="totalSuspended" prefHeight="18.0" prefWidth="137.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Total Completed Contracts  :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="totalComplete" prefHeight="18.0" prefWidth="144.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@cpu.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="vcpus" prefHeight="23.0" prefWidth="251.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@memory.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="ram" prefHeight="18.0" prefWidth="246.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@hdd.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="hd" prefHeight="18.0" prefWidth="254.0">
+                                 <HBox.margin>
+                                    <Insets left="13.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <FontAwesomeIcon glyphName="MONEY" size="1.5em">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label fx:id="totalVPS1" text="Income ">
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="totalIncome" prefHeight="16.0" prefWidth="195.0">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="700.0" text="This VPS' contracts list " textFill="#32b8e0">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="contractTable" prefHeight="200.0" prefWidth="700.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children></VBox>
+   </children>
+</AnchorPane>

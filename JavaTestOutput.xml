@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<results>
+  <group>
+    <name>Java</name>
+    <test>
+        <name>VMlifecycle</name>
+        <state>Failed</state>
+    </test>
+  </group>
+</results>

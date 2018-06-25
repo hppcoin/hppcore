@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.ContractDetailsBUYController">
+   <children>
+     <fx:include source="../menu.fxml" />
+      <VBox layoutX="252.0" layoutY="-1.0" prefHeight="800.0" prefWidth="654.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" prefHeight="29.0" prefWidth="330.0" text="VPS BUY Contract Detail" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="contractStatus" layoutX="371.0" layoutY="14.0" minWidth="250.0" prefHeight="29.0" prefWidth="319.0" textFill="#807b7b">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane minHeight="250.0" minWidth="600.0" prefHeight="250.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #b58b55#b58b55;">
+               <children>
+                  <JFXTextField fx:id="ip" editable="false" layoutX="34.0" layoutY="14.0" prefHeight="27.0" prefWidth="330.0" promptText="IP Address" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="username" editable="false" layoutX="34.0" layoutY="57.0" prefHeight="27.0" prefWidth="330.0" promptText="Username" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="setupFees" editable="false" layoutX="404.0" layoutY="13.0" promptText="Setup fees" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIcon fx:id="start" fill="#32b8e0" glyphName="PLAY" layoutX="425.0" layoutY="215.0" size="3em" />
+                  <FontAwesomeIcon fx:id="pause" accessibleText="Reboot" fill="#abcabc" glyphName="PAUSE" layoutX="333.0" layoutY="215.0" size="3em" />
+                  <JFXTextField fx:id="hourlyPrice" editable="false" layoutX="405.0" layoutY="57.0" promptText="Hourly Price" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIcon fx:id="suspend" accessibleText="Reboot" fill="#e10a0a" glyphName="BAN" layoutX="242.0" layoutY="215.0" size="3em" />
+                  <JFXTextField fx:id="status" editable="false" layoutX="404.0" layoutY="103.0" promptText="Status" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="recievingAddress" editable="false" layoutX="36.0" layoutY="104.0" prefHeight="27.0" prefWidth="330.0" promptText="Receiving Address" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Button fx:id="suspendBtn" layoutX="229.0" layoutY="176.0" mnemonicParsing="false" onAction="#suspend" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: transaparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="pauseBtn" layoutX="316.0" layoutY="177.0" mnemonicParsing="false" onAction="#pause" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: transaparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="startBtn" layoutX="398.0" layoutY="177.0" mnemonicParsing="false" onAction="#start" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: transaparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <JFXProgressBar fx:id="progress" layoutX="29.0" layoutY="200.0" visible="false" />
+                  <FontAwesomeIcon fx:id="terminal" glyphName="TERMINAL" layoutX="156.0" layoutY="213.0" size="3em" />
+                  <Button fx:id="terminalBtn" layoutX="144.0" layoutY="177.0" mnemonicParsing="false" onAction="#openTerminal" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: transaparent;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </Pane>
+            <HBox style="-fx-border-color: #000; -fx-border-width: 2;">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="CLOCK_ALT" size="1.5em">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label text="Start :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="startTime" prefHeight="18.0" prefWidth="248.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="CLOCK_ALT" size="1.5em">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label text="End">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="endTime" prefHeight="18.0" prefWidth="275.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="MONEY" size="1.5em">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label fx:id="recievedLbl" text="Sent">
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="sent" prefHeight="16.0" prefWidth="232.0">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="MONEY" size="1.5em">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                              <Label text="Remaining :">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="remaining" prefHeight="18.0" prefWidth="217.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@cpu.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="cpu" prefHeight="23.0" prefWidth="281.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@memory.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="memory" prefHeight="18.0" prefWidth="261.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@hdd.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="storage" prefHeight="18.0" prefWidth="250.0">
+                                 <HBox.margin>
+                                    <Insets left="13.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="41.0" prefWidth="600.0">
+                           <children>
+                              <Label>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="recieved" visible="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="700.0" text="This Contract' transactions list " textFill="#32b8e0">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="txTable" minWidth="700.0" prefHeight="200.0" prefWidth="700.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children></VBox>
+   </children>
+</AnchorPane>

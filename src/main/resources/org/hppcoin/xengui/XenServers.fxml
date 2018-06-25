@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hppcoin.controller.XenServersController">
+   <children>
+     <VBox layoutY="-1.0" prefHeight="800.0" prefWidth="251.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+            <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #32b8e0;" text="HPP Core" textFill="WHITE">
+               <font>
+                  <Font name="Beirut Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox fx:id="dashboardMenu" onMouseClicked="#showDashboard" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="DASHBOARD" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Label text="Dashboard" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="myVPSMenu" onMouseClicked="#showMyVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#11d9b9" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="rentedVPSMenu" onMouseClicked="#showRentedVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="SERVER" selectionFill="#103ec6" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="My Contracts" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="findVPSMenu" onMouseClicked="#showFindVPS" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#1477e1" glyphName="DATABASE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label styleClass="menu-item" text="Find VPS" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="walletMenu" onMouseClicked="#showWallet" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon fill="#16baac" glyphName="MONEY" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Wallet" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Beirut Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="globalStatsMenu" onMouseClicked="#showGlobalStats" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GLOBE" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Global Statistics" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="NotificationsMenu" onMouseClicked="#showNotifications" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="BELL" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Notifications" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="settingsMenu" onMouseClicked="#showSettings" prefHeight="40.0" prefWidth="299.0" styleClass="menu-item">
+               <children>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Settings" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="365.0" onMouseClicked="#showXenServers" prefHeight="40.0" prefWidth="299.0" fx:id="xenServerMenu">
+               <children>
+                  <FontAwesomeIcon fill="#b58b55" glyphName="SERVER" size="1.5em">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label text="Xen Servers" textFill="#7c8184">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="menu-item" />
+                  <String fx:value="active" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="252.0" layoutY="-1.0" prefHeight="800.0" prefWidth="398.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="33.0" layoutY="14.0" text="Xen Administration Panel" textFill="#6d6666">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane minHeight="250.0" minWidth="600.0" prefHeight="250.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #b58b55#b58b55;">
+               <children>
+                  <JFXTextField fx:id="ip" layoutX="34.0" layoutY="31.0" prefHeight="27.0" prefWidth="330.0" promptText="IP Address" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="username" layoutX="34.0" layoutY="86.0" prefHeight="27.0" prefWidth="330.0" promptText="Username" unFocusColor="#15ab9c">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="170.0" layoutY="203.0" onAction="#addXenServer" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #15ab9c#15ab9c;" text="Add Xen Server">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="hostName" layoutX="404.0" layoutY="31.0" promptText="Host Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox fx:id="defaultServer" layoutX="404.0" layoutY="104.0" text="Default Xen Server">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXPasswordField fx:id="password" layoutX="34.0" layoutY="150.0" prefHeight="27.0" prefWidth="330.0" promptText="Password" unFocusColor="#15ab9c" />
+                  <FontAwesomeIcon fx:id="ok" fill="#15ab9c" glyphName="CHECK" layoutX="436.0" layoutY="221.0" size="2em" visible="false" />
+                  <FontAwesomeIcon fx:id="ko" fill="#e10a0a" glyphName="REMOVE" layoutX="494.0" layoutY="219.0" size="2em" visible="false" />
+                  <JFXProgressBar layoutX="362.0" layoutY="215.0" visible="false" fx:id="xenProgress" />
+               </children>
+            </Pane>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="613.0" text="My Xen Servers List" textFill="#b58b55">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <TableView prefHeight="307.0" prefWidth="600.0" fx:id="xenTable" />
+         </children></VBox>
+   </children>
+</AnchorPane>
