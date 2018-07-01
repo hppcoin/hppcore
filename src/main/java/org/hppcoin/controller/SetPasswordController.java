@@ -82,6 +82,7 @@ public class SetPasswordController implements Initializable {
 				primaryStage.show();
 
 			} catch (IOException e) {
+				e.printStackTrace();
 				LOGGER.severe(e.getMessage());
 			}
 		}

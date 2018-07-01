@@ -18,8 +18,8 @@
         <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
         <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:hppcoin.db" />
         <property name="eclipselink.logging.level" value="OFF" />
-<!--         <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
-         <property name="eclipselink.ddl-generation" value="create-tables-create" />
+        <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+<!--          <property name="eclipselink.ddl-generation" value="create-tables-create" /> -->
       </properties>
     </persistence-unit>
  </persistence>
