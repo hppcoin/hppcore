@@ -43,12 +43,10 @@ public class BuyerAgent extends Agent {
 
 			@Override
 			public void action() {
-				System.out.println("updateResourcesBehaviour start block for new resource msg to come "+((System.currentTimeMillis()-timer)/1000)+" seconds");
 				MessageTemplate temp = MessageTemplate.MatchPerformative(ACLMessage.INFORM);
 				ACLMessage aclMeessage = receive(temp);
 				if (aclMeessage != null) {
 					String hostsJson = aclMeessage.getContent();
-					System.out.println("hostsJson" + hostsJson);
 					List<VPS> vpsList = Parser.fromJson(hostsJson);
 					if (vpsList != null && vpsList.size() > 0) {
 						new VPSDaoImpl().updateVPS(vpsList);

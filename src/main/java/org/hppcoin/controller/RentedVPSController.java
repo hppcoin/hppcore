@@ -233,7 +233,6 @@ public class RentedVPSController extends MenuControler implements Initializable 
 				newlist.add(v);
 			}
 
-		System.out.println("active" + newlist.size());
 		Platform.runLater(() -> contractTableActive.setItems(newlist));
 	}
 

@@ -97,7 +97,6 @@ public class XenServerService {
 		PowerStatus powerStatus = PowerStatus.UNRECOGNIZED;
 		try {
 			String status = vm.getPowerState(connection).toString();
-			System.out.println("status = " + status);
 			switch (status) {
 			case "Halted":
 				powerStatus = PowerStatus.HALTED;

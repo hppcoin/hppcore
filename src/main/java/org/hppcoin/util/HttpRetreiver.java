@@ -39,12 +39,4 @@ public class HttpRetreiver {
 		}
 	}
 
-	public static void main(String[] args) {
-		try {
-			System.out.println(new HttpRetreiver().get("http://denver.hppcoin.org:17777/json/122.118.47.126"));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			LOGGER.severe(e.getMessage());
-		}
-	}
 }

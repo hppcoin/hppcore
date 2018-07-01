@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class Balance {
 	@Id
 	final long id = 1;
-	double available;
+	double available; 
 	double pending;
 
 	public double getAvailable() {

@@ -44,7 +44,6 @@ public class ContractDaoImpl implements ContractDao {
 		try {
 			synchronized (Settings.monitor) {
 			em.getTransaction().begin();
-			System.out.println("ContractDaoImpl -> save getSetupPrice = "+contract.getSetupPrice());
 			em.persist(contract);
 			em.getTransaction().commit();
 			em.close();

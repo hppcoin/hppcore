@@ -53,7 +53,6 @@ public class SetupFeesVerificationAgent extends Agent {
 
 			@Override
 			public void action() {
-				System.out.println("SetupFeesVerificationAgent started and will block for incoming Credentials Requests !");
 				VPSDao vpsDao = new VPSDaoImpl();
 				ACLMessage message = receive(MessageTemplate.MatchPerformative(ACLMessage.INFORM));
 				if (message != null) {

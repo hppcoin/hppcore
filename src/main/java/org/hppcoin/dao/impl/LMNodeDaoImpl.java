@@ -38,7 +38,6 @@ public class LMNodeDaoImpl implements LMNodeDao {
 			node.setAddress(" ");
 		if (node.getIp() == null)
 			node.setIp(" ");
-		System.out.println(node.toString());
 		return node;
 	}
 

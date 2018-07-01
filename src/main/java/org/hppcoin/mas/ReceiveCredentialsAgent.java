@@ -49,11 +49,9 @@ public class ReceiveCredentialsAgent extends Agent {
 			@Override
 			public void action() {
 				ACLMessage credentialsResponse = receive();
-				System.out.println("ReceiveCredentialsAgent Started  and  block waiting for Credentials receival !"+((System.currentTimeMillis()-timer)/1000)+" seconds");
 				if (credentialsResponse != null && credentialsResponse.getContent() != null) {
 					String credentials = credentialsResponse.getContent();
 					try {
-						System.out.println("Credentials recieved = " + credentials);
 						String parts[] = credentials.split(";");
 						String ip = parts[0];
 						String port = parts[1];

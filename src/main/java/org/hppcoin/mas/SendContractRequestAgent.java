@@ -33,7 +33,6 @@ public class SendContractRequestAgent extends Agent {
 
 	@Override
 	protected void setup() {
-		System.out.println("SendContractRequestAgent.setup()");
 		DFAgentDescription template = new DFAgentDescription();
 		template.setName(getAID());
 		ServiceDescription agentDescriptor = new ServiceDescription();
@@ -58,8 +57,6 @@ public class SendContractRequestAgent extends Agent {
 				ContractDao contractDao = new ContractDaoImpl();
 				List<Contract> pendingContracts = contractDao.selectByContractTypeAndStatus(ContractType.BUY,
 						ContractStatus.PENDING);
-				System.out.println("SendContractRequestAgent Started  and  block waiting for new Contract pending  !"
-						+ ((System.currentTimeMillis() - timer) / 1000) + " seconds");
 				ACLMessage requestMessage = new ACLMessage(ACLMessage.REQUEST);
 
 				if (pendingContracts != null && pendingContracts.size() > 0) {
@@ -71,8 +68,6 @@ public class SendContractRequestAgent extends Agent {
 					send(requestMessage);
 					contract.setContractStatus(ContractStatus.PRERESERVED);
 					contractDao.update(contract);
-					System.out.println(
-							"Request Contract msg sent ! to  " + contract.getVps().getReceiveRequestAgentGID());
 				}
 				block(60000);
 

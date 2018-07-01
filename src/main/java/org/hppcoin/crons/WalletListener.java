@@ -112,16 +112,6 @@ public	List<org.hppcoin.model.HPPTransaction> listRecentTransactions() {
 
 	}
 
-	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-		List<LMNode> nodes = new WalletListener(false).LMNodes();
-		for (LMNode node : nodes)
-			if (node.getCountry().equals("Uknown"))
-				System.out.println(node);
-		System.out.println("time in sec =" + (System.currentTimeMillis() - start) / 1000);
-
-	}
-
 	public static void getGeo(LMNode node) {
 		HttpRetreiver client = new HttpRetreiver();
 		if (node.getIp() != null && (node.getIp().length() > 5)) {

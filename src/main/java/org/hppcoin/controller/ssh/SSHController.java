@@ -92,7 +92,6 @@ public class SSHController extends MenuControler implements Initializable {
 				try {
 					stdout = new Shell.Plain(shell).exec(commandTxf.getText());
 					consoleTxa.appendText(stdout);
-					System.out.println(stdout);
 					Platform.runLater(() -> {
 						progress.setVisible(false);
 						executeBtn.setDisable(false);
@@ -141,7 +140,6 @@ public class SSHController extends MenuControler implements Initializable {
 
 					shell = new SshByPassword(contract.getIp(), contract.getSshPort(), contract.getUsername(), contract.getPassword());
 					String stdout = new Shell.Plain(shell).exec("ls");
-					System.out.println(stdout);
 					Platform.runLater(() -> {
 						progress.setVisible(false);
 						executeBtn.setDisable(false);

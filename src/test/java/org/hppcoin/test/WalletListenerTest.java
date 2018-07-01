@@ -36,7 +36,6 @@ public class WalletListenerTest {
 		String newaddress = wallet.getNewAddress();
 		assertEquals('h', newaddress.charAt(0));
 		assertEquals(34, newaddress.length());
-		System.out.println(wallet.dumpPrivKey(newaddress));
 	}
 
 //	@Test
@@ -46,21 +45,14 @@ public class WalletListenerTest {
 		list.add(1);
 		list.add(25);
 		Collections.sort(list);
-		System.out.println(list.get(0));
 		WalletListener wallet = new WalletListener(false);
 		List<Transaction> transactions = wallet.listTransactions();
-		for (Transaction tx : transactions)
-		{		System.out.println("account:" + tx.account() + " amount:" + tx.amount() + " address:" + tx.address()
-					+ " txid:" + tx.txId() + " time:" + tx.time().getTime() + " confirmation:" + tx.confirmations());
-		System.out.println(tx.toString());
-		}
+		
 	}
 //	@Test
 	public void listtLMNodesTest() {
 		
 		WalletListener wallet = new WalletListener(false);
-		
-		System.out.println(wallet.listLMNodes());
 		assertEquals(0, 0);
 		
 	}

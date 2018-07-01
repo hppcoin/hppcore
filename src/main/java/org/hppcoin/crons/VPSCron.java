@@ -26,7 +26,6 @@ public class VPSCron {
 	public static void purgeOtherVPS() {
 		new Thread(()->  { 
 			int purged =new VPSDaoImpl().purgeOtherVPS();
-			System.out.println(purged+ " VPS purged");
 		}).start();
 	}
 

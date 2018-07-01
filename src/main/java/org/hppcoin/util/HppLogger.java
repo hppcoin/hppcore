@@ -34,7 +34,6 @@ public class HppLogger {
 	static private Formatter formatterHTML;
 
 	static public void setup() throws IOException {
-		System.out.println("Setup static");
 		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		Logger rootLogger = Logger.getLogger("");
 		Handler[] handlers = rootLogger.getHandlers();

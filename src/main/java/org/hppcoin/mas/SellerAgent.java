@@ -29,7 +29,6 @@ public class SellerAgent extends Agent {
 	@Override
 	protected void setup() {
 		LOGGER.info("SellerAgent.setup()");
-		System.out.println("SellerAgent.setup()");
 		DFAgentDescription template = new DFAgentDescription();
 		template.setName(getAID());
 		ServiceDescription agentDescriptor = new ServiceDescription();
@@ -51,7 +50,6 @@ public class SellerAgent extends Agent {
 			@Override
 			public void action() {
 				List<VPS> hosts = new VPSDaoImpl().selectMine();
-		if(null!= hosts) 		System.out.println("Seller Agent vps mine size=" + hosts.size());
 				if (null != hosts && hosts.size() > 0) {
 					boolean isOneAvailable = false;
 					for (VPS vps : hosts)
@@ -82,7 +80,6 @@ public class SellerAgent extends Agent {
 							template.addServices(sd);
 
 							DFAgentDescription[] dfads = DFService.search(myAgent, template);
-							System.out.println("dfads length = " + dfads.length);
 							if (dfads != null && dfads.length > 0) {
 								for (DFAgentDescription dfAgentDesc : dfads) {
 									message.addReceiver(dfAgentDesc.getName());

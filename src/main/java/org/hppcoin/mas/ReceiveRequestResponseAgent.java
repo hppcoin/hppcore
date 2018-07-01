@@ -59,7 +59,6 @@ public class ReceiveRequestResponseAgent  extends Agent {
 		@Override
 		public void action() {
 			ACLMessage reservatioResponse = receive();
-			System.out.println("ReceiveRequestResponseAgent Started  and  block waiting for Request Responses  !"+((System.currentTimeMillis()-timer)/1000)+" seconds");
 			if (reservatioResponse != null&&reservatioResponse.getContent()!=null) {
 				String uuid=null,contractId=null,replyTo=null;
 				try {
@@ -77,12 +76,10 @@ public class ReceiveRequestResponseAgent  extends Agent {
 				VPS vps=contract.getVps();
 				String txt = reservatioResponse.getContent();
 				if (txt.startsWith("OK")) {
-					System.out.println("OK recieved ");
 					contract.setContractStatus(ContractStatus.RESERVED);
 					contractDao.update(contract);
 					String txid = new WalletListener(false).sendToAddress(contract.getRecievingAddress(),
 							contract.getSetupPrice());
-					System.out.println("Setup Fees Paid txid = "+txid);
 					if (txid != null && txid.length() > 20) {
 						ACLMessage setupFeesMsg = new ACLMessage(ACLMessage.INFORM);
 					HPPTransaction	newTransaction =new HPPTransaction(txid);
@@ -96,7 +93,6 @@ public class ReceiveRequestResponseAgent  extends Agent {
 						setupFeesMsg.setContent( txid + ";" + uuid + ";" +contractId + ";" +Settings.ReceiveCredentialsAgentGID + ";" +contract.getDurationHours());
 						setupFeesMsg.addReceiver(new AID(replyTo));
 						send(setupFeesMsg);
-						System.out.println("Paiement sent and msg  broadcasted ");
 					}
 
 				}

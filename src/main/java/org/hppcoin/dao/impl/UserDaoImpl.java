@@ -57,7 +57,6 @@ public class UserDaoImpl implements UserDao {
 			em.getTransaction().begin();
 			users = query.getResultList();
 			em.getTransaction().commit();
-			System.out.println("users.size = " + users.size());
 			if (users != null && users.size() > 0)
 				for (User u : users)
 					if (u.getPassword().equals(Sha256Digest.sha256(password)))
@@ -80,7 +79,6 @@ public class UserDaoImpl implements UserDao {
 			em.getTransaction().begin();
 			users = query.getResultList();
 			em.getTransaction().commit();
-			System.out.println("users.size = " + users.size());
 			return users;
 		} catch (Exception e) {
 			e.printStackTrace();

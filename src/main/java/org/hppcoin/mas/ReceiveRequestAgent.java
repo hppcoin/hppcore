@@ -50,15 +50,12 @@ public class ReceiveRequestAgent extends Agent {
 
 			@Override
 			public void action() {
-				System.out.println("handleContractRequestMessages started and will block for new message : "
-						+ ((System.currentTimeMillis() - timer) / 1000) + " seconds");
 				VPSDao vpsDao = new VPSDaoImpl();
 				ACLMessage message = receive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
 				if (message != null) {
 					String uuid = null;
 					String contractId = null;
 					String replyTo = null;
-					System.out.println("Contract Request Msg received !");
 					ACLMessage response = new ACLMessage(ACLMessage.INFORM);
 					String requestContent = message.getContent();
 					if (requestContent != null) {
@@ -67,8 +64,6 @@ public class ReceiveRequestAgent extends Agent {
 							uuid = parts[0];
 							contractId = parts[1];
 							replyTo = parts[2];
-							System.out.println("received 	uuid = " + uuid + " 	contractId =" + contractId
-									+ " 	replyTo =" + replyTo);
 						} catch (Exception e) {
 							LOGGER.severe(e.getMessage());
 							e.printStackTrace();
@@ -78,10 +73,8 @@ public class ReceiveRequestAgent extends Agent {
 							vps.setRentalSattus(VPSRentalStatus.RESERVED);
 							vpsDao.update(vps);
 							response.setContent("OK;" + uuid + ";" + contractId + ";" + Settings.SetupFeesVerificationGID);
-							System.out.println("OK Sent");
 						} else {
 							response.setContent("KO;" + uuid + ";" + contractId);
-							System.out.println("KO Sent");
 						}
 					}
 					response.addReceiver(new AID(replyTo));
