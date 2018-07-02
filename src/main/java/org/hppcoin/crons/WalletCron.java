@@ -369,7 +369,7 @@ public class WalletCron {
 			switch (ostype) {
 			case Windows:
 				if ((f = new File(home, "AppData" + File.separatorChar + "Roaming" + File.separatorChar + "Hppcoin"
-						+ File.separatorChar + "bitcoin.conf")).exists()) {
+						+ File.separatorChar + "hppcoin.conf")).exists()) {
 					System.out.println("Windows");
 				}
 				break;
