@@ -37,6 +37,7 @@ import org.hppcoin.crons.VPSCron;
 import org.hppcoin.crons.WalletCron;
 import org.hppcoin.dao.impl.SettingsDaoImpl;
 import org.hppcoin.model.Settings;
+import org.hppcoin.util.OsCheck;
 import org.hppcoin.util.Sha256Digest;
 
 import javafx.event.ActionEvent;
@@ -65,6 +66,27 @@ public class LoginController implements Initializable {
 		WalletCron.suspendAllImpaidContracts();
 		List<String> peers = new ArrayList<>();
 		try {
+			new Thread(() -> {
+				OsCheck.OSType ostype = OsCheck.getOperatingSystemType();
+				try {
+					WalletCron.createConfigFileIfNotExist(ostype);
+					switch (ostype) {
+					case Windows:
+						Runtime.getRuntime().exec("hppcoind.exe -daemon");
+						break;
+					case MacOS:
+						Runtime.getRuntime().exec("./hppcoind -daemon");
+						break;
+					case Linux:
+						Runtime.getRuntime().exec("./hppcoind -daemon");
+						break;
+					case Other:
+						break;
+					}
+
+				} catch (IOException e) {
+				}
+			}).start();
 			String path = LoginController.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
 			LOGGER.info("Path :" + path);
 			File jarFile = new File(path);
@@ -85,17 +107,18 @@ public class LoginController implements Initializable {
 		for (String peer : peers) {
 			try {
 				LOGGER.info("Start Launching agent in Platform :" + peer);
-//				jade.MicroBoot.main(new String[] { "-host", peer, "-container", "-agents",
-//						"sellerAgent" + id + ":org.hppcoin.mas.SellerAgent;"+"buyerAgent" + id + ":org.hppcoin.mas.BuyerAgent;"+"sendContractRequestAgent" + id + ":org.hppcoin.mas.SendContractRequestAgent" });
+				// jade.MicroBoot.main(new String[] { "-host", peer, "-container", "-agents",
+				// "sellerAgent" + id + ":org.hppcoin.mas.SellerAgent;"+"buyerAgent" + id +
+				// ":org.hppcoin.mas.BuyerAgent;"+"sendContractRequestAgent" + id +
+				// ":org.hppcoin.mas.SendContractRequestAgent" });
 				jade.MicroBoot.main(new String[] { "-host", peer, "-container", "-agents",
-						 "buyerAgent" + id + ":org.hppcoin.mas.BuyerAgent;"
-					+	 "sellerAgent" + id + ":org.hppcoin.mas.SellerAgent;"
-					+	 "receiveCredentialsAgent" + id + ":org.hppcoin.mas.ReceiveCredentialsAgent;"
-					+	 "receiveRequestAgent" + id + ":org.hppcoin.mas.ReceiveRequestAgent;"
-					+	 "receiveRequestResponseAgent" + id + ":org.hppcoin.mas.ReceiveRequestResponseAgent;"
-					+	 "sendContractRequestAgent" + id + ":org.hppcoin.mas.SendContractRequestAgent;"
-					+	 "setupFeesVerificationAgent" + id + ":org.hppcoin.mas.SetupFeesVerificationAgent"
-				});
+						"buyerAgent" + id + ":org.hppcoin.mas.BuyerAgent;" + "sellerAgent" + id
+								+ ":org.hppcoin.mas.SellerAgent;" + "receiveCredentialsAgent" + id
+								+ ":org.hppcoin.mas.ReceiveCredentialsAgent;" + "receiveRequestAgent" + id
+								+ ":org.hppcoin.mas.ReceiveRequestAgent;" + "receiveRequestResponseAgent" + id
+								+ ":org.hppcoin.mas.ReceiveRequestResponseAgent;" + "sendContractRequestAgent" + id
+								+ ":org.hppcoin.mas.SendContractRequestAgent;" + "setupFeesVerificationAgent" + id
+								+ ":org.hppcoin.mas.SetupFeesVerificationAgent" });
 				LOGGER.info("Done! Launching agent in Platform :" + peer);
 			} catch (Exception e) {
 				e.printStackTrace();

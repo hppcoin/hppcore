@@ -1,8 +1,20 @@
-Jul 01, 2018 12:35:10 PM org.hppcoin.Main main
+Jul 01, 2018 11:23:14 PM org.hppcoin.Main main
 SEVERE: App main started
-Jul 01, 2018 12:35:11 PM org.hppcoin.controller.SetPasswordController initialize
-INFO: SetPasswordController initialized
-Jul 01, 2018 12:35:12 PM org.hppcoin.Main initRootLayout
-SEVERE: 
-file:/Users/ramalin/hppcore/target/jfx/app/HppCore-0.0.1-SNAPSHOT-jfx.jar!/org/hppcoin/login/SetPassword.fxml
-
+Jul 01, 2018 11:23:15 PM org.hppcoin.controller.LoginController initialize
+INFO: LoginController initialized
+Jul 01, 2018 11:23:15 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 01, 2018 11:23:15 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 01, 2018 11:23:15 PM org.hppcoin.crons.WalletCron$2 run
+SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
+Jul 01, 2018 11:23:15 PM org.hppcoin.crons.WalletCron$2 run
+SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
+Jul 01, 2018 11:23:15 PM org.hppcoin.controller.LoginController initialize
+INFO: Path :/Users/ramalin/hppcore/target/jfx/app/HppCore-1.1.0-jfx.jar
+Jul 01, 2018 11:23:15 PM org.hppcoin.controller.LoginController initialize
+INFO: Start Launching agent in Platform :china.hppcoin.org
+Jul 01, 2018 11:23:16 PM org.hppcoin.mas.SellerAgent setup
+INFO: SellerAgent.setup()
+Jul 01, 2018 11:23:16 PM org.hppcoin.controller.LoginController initialize
+INFO: Done! Launching agent in Platform :china.hppcoin.org

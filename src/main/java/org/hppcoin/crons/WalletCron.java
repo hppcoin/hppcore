@@ -17,12 +17,19 @@
  */
 package org.hppcoin.crons;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import org.apache.commons.codec.binary.Base64;
+import org.apache.mina.filter.buffer.BufferedWriteFilter;
 import org.apache.xmlrpc.XmlRpcException;
 import org.hppcoin.dao.ContractDao;
 import org.hppcoin.dao.TransactionDao;
@@ -36,6 +43,7 @@ import org.hppcoin.model.HPPTransaction;
 import org.hppcoin.model.LMNode;
 import org.hppcoin.model.TransactionType;
 import org.hppcoin.service.XenServerService;
+import org.hppcoin.util.OsCheck.OSType;
 
 import com.xensource.xenapi.Types.XenAPIException;
 
@@ -208,9 +216,10 @@ public class WalletCron {
 			contract.setContractStatus(ContractStatus.SUSPENDED);
 			contractDao.update(contract);
 			try {
-				XenServerService service=new XenServerService(contract.getVps().getXenServer().getIp(), contract.getVps().getXenServer().getUsername(), contract.getVps().getXenServer().getPassword());
-			    service.shutDownVM(contract.getVps().getUuid());
-			    LOGGER.severe(contract.getId()+" Suspended ! at "+new Date() );
+				XenServerService service = new XenServerService(contract.getVps().getXenServer().getIp(),
+						contract.getVps().getXenServer().getUsername(), contract.getVps().getXenServer().getPassword());
+				service.shutDownVM(contract.getVps().getUuid());
+				LOGGER.severe(contract.getId() + " Suspended ! at " + new Date());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -349,6 +358,57 @@ public class WalletCron {
 				}
 			}
 		}.start();
+
+	}
+
+	public static void createConfigFileIfNotExist(OSType ostype) {
+		try {
+			File f = null;
+			File home = new File(System.getProperty("user.home"));
+			boolean exist = false;
+			switch (ostype) {
+			case Windows:
+				if ((f = new File(home, "AppData" + File.separatorChar + "Roaming" + File.separatorChar + "Hppcoin"
+						+ File.separatorChar + "bitcoin.conf")).exists()) {
+					System.out.println("Windows");
+				}
+				break;
+			case MacOS:
+				if ((f = new File(home, "Library/Application Support/hppcoin" + File.separatorChar + "hppcoin.conf"))
+						.exists()) {
+					exist = true;
+					System.out.println("MacOsx");
+				}
+				break;
+			case Linux:
+				if ((f = new File(home, ".hppcoin" + File.separatorChar + "hppcoin.conf")).exists()) {
+					System.out.println("Linux");
+					exist = true;
+				}
+				break;
+			case Other:
+				break;
+			}
+			if (!exist) {
+				BufferedWriter fw = new BufferedWriter(new FileWriter(f));
+				long userLong = new Random().nextLong();
+				Base64 binaryBase64 = new Base64();
+
+				String userPart1 = new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(userLong), 10).toByteArray()));
+				String userPart2 = new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(userLong), 10).toByteArray()));
+				long passLong = new Random().nextLong();
+				String passPart1 =  new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(passLong), 10).toByteArray()));
+				String passPart2 =  new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(passLong), 10).toByteArray()));
+				fw.write("rpcuser=" + userPart1+userPart2);
+				fw.newLine();
+				fw.write("rpcpassword=" + passPart1+passPart2);
+				fw.flush();
+				fw.close();
+				System.out.println("hppcoin.conf Created !");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 

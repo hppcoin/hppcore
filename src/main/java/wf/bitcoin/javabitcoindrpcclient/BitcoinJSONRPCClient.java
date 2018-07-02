@@ -101,8 +101,10 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 			File home = new File(System.getProperty("user.home"));
 
 			if ((f = new File(home, ".hppcoin" + File.separatorChar + "hppcoin.conf")).exists()) {
+				System.out.println("Linux");
 			} else if ((f = new File(home, "AppData" + File.separatorChar + "Roaming" + File.separatorChar + "Bitcoin"
 					+ File.separatorChar + "bitcoin.conf")).exists()) {
+				System.out.println("Windows");
 			} else {
 				if ((f = new File(home, "Library/Application Support/hppcoin" + File.separatorChar + "hppcoin.conf"))
 						.exists()) {

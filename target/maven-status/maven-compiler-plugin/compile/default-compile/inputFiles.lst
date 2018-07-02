@@ -7,6 +7,7 @@
 /Users/ramalin/hppcore/src/main/java/org/hppcoin/controller/SetPasswordController.java
 /Users/ramalin/hppcore/src/main/java/org/hppcoin/model/OS.java
 /Users/ramalin/hppcore/src/main/java/wf/bitcoin/javabitcoindrpcclient/BitcoinPaymentListener.java
+/Users/ramalin/hppcore/src/main/java/org/hppcoin/util/OsCheck.java
 /Users/ramalin/hppcore/src/main/java/org/hppcoin/model/User.java
 /Users/ramalin/hppcore/src/main/java/org/hppcoin/view/TransactionView.java
 /Users/ramalin/hppcore/src/main/java/org/hppcoin/controller/XenServerDetailController.java
