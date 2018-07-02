@@ -1,22 +1,4 @@
-Jul 02, 2018 7:25:29 PM org.hppcoin.Main main
+Jul 02, 2018 8:54:10 PM org.hppcoin.Main main
 SEVERE: App main started
-Jul 02, 2018 7:25:31 PM org.hppcoin.controller.LoginController initialize
-INFO: LoginController initialized
-Jul 02, 2018 7:25:31 PM org.hppcoin.controller.LoginController initialize
-INFO: Path :/Users/ramalin/hppcore/target/jfx/app/HppCore-1.1.0-jfx.jar
-Jul 02, 2018 7:25:31 PM org.hppcoin.controller.LoginController initialize
-INFO: Start Launching agent in Platform :china.hppcoin.org
-Jul 02, 2018 7:25:31 PM org.hppcoin.crons.WalletCron$2 run
-INFO: LMNode List updated with 0 nodes
-Jul 02, 2018 7:25:32 PM org.hppcoin.mas.SellerAgent setup
-INFO: SellerAgent.setup()
-Jul 02, 2018 7:25:32 PM org.hppcoin.controller.LoginController initialize
-INFO: Done! Launching agent in Platform :china.hppcoin.org
-Jul 02, 2018 7:25:39 PM org.hppcoin.controller.LoginController loginAction
-INFO: The driver name is SQLite JDBC
-Jul 02, 2018 7:25:39 PM org.hppcoin.controller.LoginController loginAction
-SEVERE: Wait please
-Jul 02, 2018 7:26:40 PM org.hppcoin.dao.impl.LMNodeDaoImpl getWinner
-SEVERE: java.base/java.lang.String cannot be cast to java.base/java.util.Map
-Jul 02, 2018 7:27:11 PM org.hppcoin.dao.impl.LMNodeDaoImpl getWinner
-SEVERE: java.base/java.lang.String cannot be cast to java.base/java.util.Map
+Jul 02, 2018 8:54:12 PM org.hppcoin.controller.SetPasswordController initialize
+INFO: SetPasswordController initialized

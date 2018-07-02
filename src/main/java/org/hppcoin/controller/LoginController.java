@@ -75,9 +75,19 @@ public class LoginController implements Initializable {
 						Runtime.getRuntime().exec("hppcoind.exe -daemon");
 						break;
 					case MacOS:
+						try {
+						Runtime.getRuntime().exec("chmod u+x hppcoind ");	
+						}catch (Exception e) {
+							e.printStackTrace();
+						}
 						Runtime.getRuntime().exec("./hppcoind -daemon");
 						break;
 					case Linux:
+						try {
+							Runtime.getRuntime().exec("chmod u+x hppcoind ");	
+							}catch (Exception e) {
+								e.printStackTrace();
+							}
 						Runtime.getRuntime().exec("./hppcoind -daemon");
 						break;
 					case Other:
