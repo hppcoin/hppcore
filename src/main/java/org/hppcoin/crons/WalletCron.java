@@ -371,6 +371,7 @@ public class WalletCron {
 				if ((f = new File(home, "AppData" + File.separatorChar + "Roaming" + File.separatorChar + "hppcoin"
 						+ File.separatorChar + "hppcoin.conf")).exists()) {
 					System.out.println("Windows");
+					exist = true;
 				}
 				break;
 			case MacOS:
