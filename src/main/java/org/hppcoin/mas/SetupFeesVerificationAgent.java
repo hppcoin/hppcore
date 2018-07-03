@@ -1,5 +1,6 @@
 package org.hppcoin.mas;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -101,12 +102,16 @@ public class SetupFeesVerificationAgent extends Agent {
 								LOGGER.severe(e.getMessage());
 								e.printStackTrace();
 							}
-							vpsDao.update(vps);
+							
 							Contract contract=new Contract(true, ContractType.SELL);
 							contract.setVps(vps);
 							contract.setStartDate(new Date().getTime());
 							contract.setDurationHours(durationHours);
-							
+							List<Contract> contracts=vps.getContracts();
+							if(contracts==null) contracts=new ArrayList<Contract>();
+							contracts.add(contract);
+							vps.setContracts(contracts);
+							vpsDao.update(vps,contract);
 							//password may contain ;
 							response.setContent(vps.getIp() + ";" + vps.getSshPort() + ";" + vps.getUser() + ";" + uuid
 									+ ";" + contractId + ";" + vps.getPassword());

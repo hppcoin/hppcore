@@ -19,6 +19,7 @@ package org.hppcoin.dao;
 
 import java.util.List;
 
+import org.hppcoin.model.Contract;
 import org.hppcoin.model.VPS;
 
 public interface VPSDao {
@@ -29,6 +30,8 @@ public interface VPSDao {
 	public void updateVPS(List<VPS> vpsList);
 
 	public int update(VPS vps);
+	
+	public int update(VPS vps,Contract contract);
 	
 	public int purgeOtherVPS();
 

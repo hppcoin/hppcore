@@ -267,6 +267,11 @@ public class Contract {
 		this.payDelay = payDelay;
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Contract)) return false;
+		Contract ct=(Contract)obj;
+		return ct.getId().equals(this.id);
+	}
 
 }

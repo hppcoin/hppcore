@@ -27,6 +27,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import org.hppcoin.dao.VPSDao;
+import org.hppcoin.model.Contract;
+import org.hppcoin.model.HPPTransaction;
 import org.hppcoin.model.Settings;
 import org.hppcoin.model.VPS;
 import org.hppcoin.model.VPSRentalStatus;
@@ -40,8 +42,6 @@ public class VPSDaoImpl implements VPSDao {
 		VPS vps = null;
 		try {
 			synchronized (Settings.monitor) {
-				
-		
 			em.getTransaction().begin();
 			vps = em.find(VPS.class, vpsID);
 			em.getTransaction().commit();
@@ -53,6 +53,29 @@ public class VPSDaoImpl implements VPSDao {
 		}
 
 		return vps;
+	}
+	
+	public void update(VPS vps, Contract contract) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hppcoin");
+		EntityManager em = emf.createEntityManager();
+		try {
+			synchronized (Settings.monitor) {
+			em.getTransaction().begin();
+			vps = em.find(VPS.class, vps.getUuid());
+			List<Contract> contracts = vps.getContracts();
+			if (contracts == null)
+				contracts = new ArrayList<>();
+			if (!contracts.contains(contract))
+				contracts.add(contract);
+			em.merge(contract);
+			contract.setVps(vps);
+			em.getTransaction().commit();
+			em.close();
+			emf.close();
+			} 
+		} catch (Exception e) {
+			LOGGER.severe(e.getMessage());
+		}
 	}
 
 	public VPS save(VPS vps) {
