@@ -31,7 +31,7 @@ public interface VPSDao {
 
 	public int update(VPS vps);
 	
-	public int update(VPS vps,Contract contract);
+	public void update(VPS vps,Contract contract);
 	
 	public int purgeOtherVPS();
 
