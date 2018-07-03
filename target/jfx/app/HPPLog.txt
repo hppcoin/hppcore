@@ -1,20 +1,24 @@
-Jul 04, 2018 12:12:40 AM org.hppcoin.Main main
+Jul 04, 2018 12:45:12 AM org.hppcoin.Main main
 SEVERE: App main started
-Jul 04, 2018 12:12:57 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 12:45:22 AM org.hppcoin.controller.LoginController initialize
 INFO: LoginController initialized
-Jul 04, 2018 12:12:57 AM org.hppcoin.crons.WalletCron$2 run
-SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
-Jul 04, 2018 12:12:57 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 12:45:22 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 12:12:57 AM org.hppcoin.crons.WalletCron$2 run
+Jul 04, 2018 12:45:22 AM org.hppcoin.crons.WalletCron$2 run
 SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
-Jul 04, 2018 12:12:57 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 12:45:22 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 12:12:57 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 12:45:22 AM org.hppcoin.crons.WalletCron$2 run
+SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
+Jul 04, 2018 12:45:22 AM org.hppcoin.controller.LoginController initialize
 INFO: Path :/Users/ramalin/hppcore/target/jfx/app/HppCore-1.1.0-jfx.jar
-Jul 04, 2018 12:12:57 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 12:45:22 AM org.hppcoin.controller.LoginController initialize
 INFO: Start Launching agent in Platform :china.hppcoin.org
-Jul 04, 2018 12:12:58 AM org.hppcoin.mas.SellerAgent setup
+Jul 04, 2018 12:45:23 AM org.hppcoin.mas.SellerAgent setup
 INFO: SellerAgent.setup()
-Jul 04, 2018 12:12:58 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 12:45:23 AM org.hppcoin.controller.LoginController initialize
 INFO: Done! Launching agent in Platform :china.hppcoin.org
+Jul 04, 2018 12:45:27 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 12:45:27 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])

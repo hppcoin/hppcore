@@ -74,7 +74,7 @@ public class TransactionDaoImpl implements TransactionDao {
                     isContracted=true;
 				 }
 			 }
-			em.persist(transaction);
+			em.merge(transaction);
 			 
 			em.getTransaction().commit();
 			em.close();
@@ -113,7 +113,7 @@ public class TransactionDaoImpl implements TransactionDao {
 		int updateCount = 0;
 		if (txs != null && txs.size() > 0)
 			for (HPPTransaction tx : txs)
-				if (!exit(tx.getTxid())) {
+		 {
 					save(tx);
 					updateCount++;
 				}
