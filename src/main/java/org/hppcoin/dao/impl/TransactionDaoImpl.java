@@ -27,6 +27,7 @@ import javax.persistence.Query;
 
 import org.hppcoin.dao.TransactionDao;
 import org.hppcoin.model.Balance;
+import org.hppcoin.model.Contract;
 import org.hppcoin.model.HPPTransaction;
 import org.hppcoin.model.Settings;
 import org.hppcoin.model.TransactionType;
@@ -61,7 +62,18 @@ public class TransactionDaoImpl implements TransactionDao {
 		try {
 			synchronized (Settings.monitor) {
 			em.getTransaction().begin();
+			if(transaction.getType().equals(TransactionType.RECEIVE))
+			 {	
+				Contract contract=new ContractDaoImpl().findByAddress(transaction.getAddress());
+				
+				if(null!=contract)  {	 
+					em.merge(contract);
+					transaction.setContract(contract);
+					new ContractDaoImpl().update(contract, transaction);
+				 }
+			 }
 			em.persist(transaction);
+			 
 			em.getTransaction().commit();
 			em.close();
 			emf.close();

@@ -97,13 +97,6 @@ public class SetupFeesVerificationAgent extends Agent {
 						if (setupFeesTx != null && vps != null && setupFeesTx.getAmount() >= vps.getSetupPrice()
 								&& vps.getRentalSattus().equals(VPSRentalStatus.RESERVED)) {
 							vps.setRentalSattus(VPSRentalStatus.RENTED);
-							try {
-							vps.setRecievingAddress(new WalletListener(true).getNewAddress());
-							} catch (Exception e) {
-								LOGGER.severe(e.getMessage());
-								e.printStackTrace();
-							}
-							
 							Contract contract=new Contract(true, ContractType.SELL);
 							contract.setContractStatus(ContractStatus.ACTIVE);
 							contract.setVps(vps);
