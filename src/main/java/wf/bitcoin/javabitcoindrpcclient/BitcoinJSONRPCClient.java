@@ -1744,6 +1744,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 
 	@Override
 	public String sendToAddress(String toAddress, double amount) throws GenericRpcException {
+		amount=(double)Math.round(amount*100000000d)/100000000d;
 		return (String) query("sendtoaddress", toAddress, amount);
 	}
 
@@ -1755,6 +1756,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 	@Override
 	public String sendToAddress(String toAddress, double amount, String comment, String commentTo)
 			throws GenericRpcException {
+		amount=(double)Math.round(amount*100000000d)/100000000d;
 		return (String) query("sendtoaddress", toAddress, amount, comment, commentTo);
 	}
 
