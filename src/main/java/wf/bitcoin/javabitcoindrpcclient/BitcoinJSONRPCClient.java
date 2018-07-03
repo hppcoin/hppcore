@@ -113,7 +113,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 			}
 
 			if (f != null) {
-				logger.fine("Bitcoin configuration file found");
+				logger.fine("hppcoin configuration file found");
 
 				Properties p = new Properties();
 				try (FileInputStream i = new FileInputStream(f)) {
@@ -126,6 +126,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 				port = p.getProperty("rpcport", port);
 			}
 		} catch (Exception ex) {
+			ex.printStackTrace();
 			logger.log(Level.SEVERE, null, ex);
 		}
 
@@ -137,6 +138,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 			DEFAULT_JSONRPC_REGTEST_URL = new URL(
 					"http://" + user + ':' + password + "@" + host + ":" + (port == null ? "7777" : port) + "/");
 		} catch (MalformedURLException ex) {
+			ex.printStackTrace();
 			throw new RuntimeException(ex);
 		}
 	}
@@ -213,6 +215,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 
 				return response.get("result");
 			} catch (ClassCastException ex) {
+				ex.printStackTrace();
 				throw new BitcoinRPCException("Invalid server response format (data: \"" + r + "\")");
 			}
 		} finally {
@@ -1095,6 +1098,7 @@ public class BitcoinJSONRPCClient implements BitcoindRpcClient {
 
 	@Override
 	public String getNewAddress() throws GenericRpcException {
+		
 		return (String) query("getnewaddress");
 	}
 

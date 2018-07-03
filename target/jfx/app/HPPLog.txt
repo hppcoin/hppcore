@@ -1,4 +1,208 @@
-Jul 02, 2018 8:54:10 PM org.hppcoin.Main main
+Jul 03, 2018 6:07:38 PM org.hppcoin.Main main
 SEVERE: App main started
-Jul 02, 2018 8:54:12 PM org.hppcoin.controller.SetPasswordController initialize
-INFO: SetPasswordController initialized
+Jul 03, 2018 6:07:39 PM org.hppcoin.controller.LoginController initialize
+INFO: LoginController initialized
+Jul 03, 2018 6:07:39 PM org.hppcoin.controller.LoginController initialize
+INFO: Path :/Users/elaineasney/eclipse-workspace/hppcore/target/jfx/app/HppCore-1.1.0-jfx.jar
+Jul 03, 2018 6:07:39 PM org.hppcoin.controller.LoginController initialize
+INFO: Start Launching agent in Platform :china.hppcoin.org
+Jul 03, 2018 6:07:40 PM org.hppcoin.crons.WalletCron$2 run
+SEVERE: null
+Jul 03, 2018 6:07:40 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:40 PM org.hppcoin.crons.WalletCron$2 run
+SEVERE: null
+Jul 03, 2018 6:07:40 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:40 PM org.hppcoin.mas.SellerAgent setup
+INFO: SellerAgent.setup()
+Jul 03, 2018 6:07:40 PM org.hppcoin.controller.LoginController initialize
+INFO: Done! Launching agent in Platform :china.hppcoin.org
+Jul 03, 2018 6:07:45 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:45 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:46 PM org.hppcoin.controller.LoginController loginAction
+INFO: The driver name is SQLite JDBC
+Jul 03, 2018 6:07:46 PM org.hppcoin.controller.LoginController loginAction
+SEVERE: Wait please
+Jul 03, 2018 6:07:50 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:50 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:53 PM org.hppcoin.controller.WalletController generateNew
+SEVERE: null
+Jul 03, 2018 6:07:55 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:07:55 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:01 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:01 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:06 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:06 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:11 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:11 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:16 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:16 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:22 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:22 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:27 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:27 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:32 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:32 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:37 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:37 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:43 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:43 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:48 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:48 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:53 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:53 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:58 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:08:58 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:04 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:04 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:09 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:09 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:14 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:14 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:19 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:19 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:25 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:25 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:30 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:30 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:35 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:35 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:36 PM org.hppcoin.dao.impl.LMNodeDaoImpl getWinner
+SEVERE: null
+Jul 03, 2018 6:09:41 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:41 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:46 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:46 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:51 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:51 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:56 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:09:56 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:02 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:02 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:07 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:07 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:10 PM org.hppcoin.dao.impl.LMNodeDaoImpl getWinner
+SEVERE: null
+Jul 03, 2018 6:10:12 PM org.hppcoin.controller.WalletController generateNew
+SEVERE: null
+Jul 03, 2018 6:10:12 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:12 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:17 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:17 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:23 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:23 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:28 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:28 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:33 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:33 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:38 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:38 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:44 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:44 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:49 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:49 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:54 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:54 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:59 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:10:59 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: null
+Jul 03, 2018 6:11:04 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:04 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:09 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:09 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:14 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:14 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 03, 2018 6:11:19 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 03, 2018 6:11:19 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 03, 2018 6:11:24 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 03, 2018 6:11:24 PM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+

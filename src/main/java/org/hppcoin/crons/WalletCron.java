@@ -394,11 +394,11 @@ public class WalletCron {
 				long userLong = new Random().nextLong();
 				Base64 binaryBase64 = new Base64();
 
-				String userPart1 = new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(userLong), 10).toByteArray()));
-				String userPart2 = new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(userLong), 10).toByteArray()));
+				String userPart1 = String.valueOf(userLong);
+				String userPart2 = String.valueOf(userLong);
 				long passLong = new Random().nextLong();
-				String passPart1 =  new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(passLong), 10).toByteArray()));
-				String passPart2 =  new String(binaryBase64.encodeBase64(new BigInteger(String.valueOf(passLong), 10).toByteArray()));
+				String passPart1 =  String.valueOf(passLong);
+				String passPart2 =  String.valueOf(passLong);
 				fw.write("rpcuser=" + userPart1+userPart2);
 				fw.newLine();
 				fw.write("rpcpassword=" + passPart1+passPart2);

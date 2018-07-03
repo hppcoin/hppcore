@@ -448,6 +448,7 @@ public class WalletController extends MenuControler implements Initializable {
 		try {
 			SettingsDao settingsDao = new SettingsDaoImpl();
 			String address = new WalletListener(false).getNewAddress();
+			System.out.println("addr = "+address);
 			Platform.runLater(new Runnable() {
 
 				@Override
@@ -461,11 +462,13 @@ public class WalletController extends MenuControler implements Initializable {
 			settings.setDefaultReceivingAddress(address);
 			settingsDao.merge(settings);
 		} catch (Exception e) {
+			e.printStackTrace();
 			LOGGER.severe(e.getMessage());
 		}
 	}
 
 	private void generateCrcode(String address) {
+		if(address==null)return;
 		newAddress.setText(address);
 		QRCodeWriter qrCodeWriter = new QRCodeWriter();
 		int width = 360;
