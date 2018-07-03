@@ -395,13 +395,13 @@ public class WalletCron {
 				Base64 binaryBase64 = new Base64();
 
 				String userPart1 = String.valueOf(userLong);
-				String userPart2 = String.valueOf(userLong);
+				String userPart2 = String.valueOf(new Random().nextLong());
 				long passLong = new Random().nextLong();
 				String passPart1 =  String.valueOf(passLong);
-				String passPart2 =  String.valueOf(passLong);
+				String passPart2 =  String.valueOf(new Random().nextLong());
 				fw.write("rpcuser=" + userPart1+userPart2);
 				fw.newLine();
-				fw.write("rpcpassword=" + passPart1+passPart2);
+				fw.write("rpcpassword=" + passPart1+passPart2+String.valueOf(new Random().nextLong()));
 				fw.flush();
 				fw.close();
 				System.out.println("hppcoin.conf Created !");
