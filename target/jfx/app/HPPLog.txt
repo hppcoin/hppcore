@@ -20,3 +20,39 @@ Jul 03, 2018 6:20:56 PM org.hppcoin.util.HttpRetreiver get
 SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
 Jul 03, 2018 6:20:56 PM org.hppcoin.util.HttpRetreiver get
 SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:20:58 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:20:59 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:03 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:04 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:05 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:05 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:06 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:06 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:09 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:10 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:10 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:10 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:12 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:12 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:12 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:12 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:19 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to nice.hppcoin.org:17777 [nice.hppcoin.org/37.59.46.162] failed: Connection refused (Connection refused)
+Jul 03, 2018 6:21:20 PM org.hppcoin.util.HttpRetreiver get
+SEVERE: Connect to italy.hppcoin.org:17777 [italy.hppcoin.org/51.255.53.129] failed: Connection refused (Connection refused)

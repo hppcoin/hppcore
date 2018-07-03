@@ -217,7 +217,7 @@
                </children>
             </Pane>
             <JFXProgressBar fx:id="progress" prefHeight="14.0" prefWidth="398.0" />
-            <JFXTextArea fx:id="consoleTxa" editable="false" focusColor="BLACK" minHeight="400.0" style="-fx-background-color: #000000; -fx-text-fill: #ffffff;" text="test" unFocusColor="BLACK">
+            <JFXTextArea fx:id="consoleTxa" editable="false" focusColor="BLACK" minHeight="400.0" style="-fx-background-color: #000000; -fx-text-fill: #ffffff;" text="" unFocusColor="BLACK">
                <opaqueInsets>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </opaqueInsets>
