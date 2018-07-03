@@ -59,17 +59,19 @@ public class TransactionDaoImpl implements TransactionDao {
 	public HPPTransaction save(HPPTransaction transaction) {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hppcoin");
 		EntityManager em = emf.createEntityManager();
+		boolean isContracted=false;
+		Contract contract=null;
 		try {
 			synchronized (Settings.monitor) {
 			em.getTransaction().begin();
 			if(transaction.getType().equals(TransactionType.RECEIVE))
 			 {	
-				Contract contract=new ContractDaoImpl().findByAddress(transaction.getAddress());
+				 contract=new ContractDaoImpl().findByAddress(transaction.getAddress());
 				
 				if(null!=contract)  {	 
 					em.merge(contract);
 					transaction.setContract(contract);
-					new ContractDaoImpl().update(contract, transaction);
+                    isContracted=true;
 				 }
 			 }
 			em.persist(transaction);
@@ -77,6 +79,7 @@ public class TransactionDaoImpl implements TransactionDao {
 			em.getTransaction().commit();
 			em.close();
 			emf.close();
+			if(isContracted) new ContractDaoImpl().update(contract, transaction);
 			} 
 		} catch (Exception e) {
 			LOGGER.severe(e.getMessage());
