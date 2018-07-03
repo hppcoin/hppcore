@@ -9,6 +9,7 @@ import org.hppcoin.crons.WalletListener;
 import org.hppcoin.dao.VPSDao;
 import org.hppcoin.dao.impl.VPSDaoImpl;
 import org.hppcoin.model.Contract;
+import org.hppcoin.model.ContractStatus;
 import org.hppcoin.model.ContractType;
 import org.hppcoin.model.HPPTransaction;
 import org.hppcoin.model.Settings;
@@ -104,6 +105,7 @@ public class SetupFeesVerificationAgent extends Agent {
 							}
 							
 							Contract contract=new Contract(true, ContractType.SELL);
+							contract.setContractStatus(ContractStatus.ACTIVE);
 							contract.setVps(vps);
 							contract.setStartDate(new Date().getTime());
 							contract.setDurationHours(durationHours);

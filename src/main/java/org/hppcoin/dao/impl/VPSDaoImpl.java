@@ -61,7 +61,7 @@ public class VPSDaoImpl implements VPSDao {
 		try {
 			synchronized (Settings.monitor) {
 			em.getTransaction().begin();
-			vps = em.find(VPS.class, vps.getUuid());
+			em.merge(vps);
 			List<Contract> contracts = vps.getContracts();
 			if (contracts == null)
 				contracts = new ArrayList<>();

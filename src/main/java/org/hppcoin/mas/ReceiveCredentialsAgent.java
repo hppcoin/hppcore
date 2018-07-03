@@ -74,10 +74,10 @@ public class ReceiveCredentialsAgent extends Agent {
 							contract.setStartDate(startTime);
 							contract.setUsername(user);
 							contract.setPassword(pass);
-							WalletCron.payContract(contract);
 							new VPSDaoImpl().update(vps);
 							contract.setContractStatus(ContractStatus.ACTIVE);
 							new ContractDaoImpl().update(contract);
+							WalletCron.payContract(contract);
 						}
 					} catch (Exception e) {
 						e.printStackTrace();
