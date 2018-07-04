@@ -195,4 +195,30 @@ public class TransactionDaoImpl implements TransactionDao {
 		return amount;
 	}
 
+	public void updateAll(Contract contract) {
+		List<HPPTransaction> txs = selectAll();
+		if (txs == null || txs.size() < 1)
+			return ;
+		for (HPPTransaction tx : txs)
+			if (tx.getAddress().equals(contract.getRecievingAddress()))
+				try {
+					EntityManagerFactory emf = Persistence.createEntityManagerFactory("hppcoin");
+					EntityManager em = emf.createEntityManager();
+					synchronized (Settings.monitor) {
+					em.getTransaction().begin();
+					em.merge(tx);
+					em.merge(contract);
+					tx.setContract(contract);
+					new ContractDaoImpl().update(contract, tx);
+					em.getTransaction().commit();
+					em.close();
+					emf.close();
+					} 
+				} catch (Exception e) {
+					LOGGER.severe(e.getMessage());
+
+				}
+		
+	}
+
 }

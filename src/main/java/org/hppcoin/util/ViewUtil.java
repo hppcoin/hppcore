@@ -475,6 +475,7 @@ public class ViewUtil {
 			}
 			contractView.setStatus(contract.getContractStatus().toString());
 			double amount = new TransactionDaoImpl().getReceivedAmount(contract.getRecievingAddress());
+			 new TransactionDaoImpl().updateAll(contract);
 			contractView.setPaidAmount(amount);
             contractView.setCpu(contract.getCores());
             contractView.setMemory(contract.getMemorySize());
