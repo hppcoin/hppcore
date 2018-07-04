@@ -1,128 +1,347 @@
-Jul 04, 2018 2:04:24 AM org.hppcoin.Main main
+Jul 04, 2018 9:28:36 AM org.hppcoin.Main main
 SEVERE: App main started
-Jul 04, 2018 2:04:26 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 9:28:38 AM org.hppcoin.controller.LoginController initialize
 INFO: LoginController initialized
-Jul 04, 2018 2:04:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:26 AM org.hppcoin.crons.WalletCron$2 run
+Jul 04, 2018 9:28:38 AM org.hppcoin.crons.WalletCron$2 run
 SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
-Jul 04, 2018 2:04:26 AM org.hppcoin.crons.WalletCron$2 run
-SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
-Jul 04, 2018 2:04:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:26 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 9:28:38 AM org.hppcoin.crons.WalletCron$2 run
+SEVERE: RPC Query Failed (method: lmnode, params: [list, full])
+Jul 04, 2018 9:28:38 AM org.hppcoin.controller.LoginController initialize
 INFO: Path :/Users/ramalin/hppcore/target/jfx/app/HppCore-1.1.0-jfx.jar
-Jul 04, 2018 2:04:26 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 9:28:38 AM org.hppcoin.controller.LoginController initialize
 INFO: Start Launching agent in Platform :china.hppcoin.org
-Jul 04, 2018 2:04:26 AM org.hppcoin.mas.SellerAgent setup
+Jul 04, 2018 9:28:39 AM org.hppcoin.mas.SellerAgent setup
 INFO: SellerAgent.setup()
-Jul 04, 2018 2:04:26 AM org.hppcoin.controller.LoginController initialize
+Jul 04, 2018 9:28:39 AM org.hppcoin.controller.LoginController initialize
 INFO: Done! Launching agent in Platform :china.hppcoin.org
-Jul 04, 2018 2:04:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:46 AM org.hppcoin.controller.LoginController loginAction
+INFO: The driver name is SQLite JDBC
+Jul 04, 2018 9:28:46 AM org.hppcoin.controller.LoginController loginAction
+SEVERE: Wait please
+Jul 04, 2018 9:28:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:46 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:58 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:46 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:28:58 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:51 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:03 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:51 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:03 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:56 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:08 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:04:56 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:08 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:01 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:13 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:01 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:13 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:06 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:18 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:06 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:18 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:11 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:23 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:11 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:23 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:16 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:28 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:16 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:28 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:21 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:33 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:21 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:33 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:46 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:58 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:46 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:29:58 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:51 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:03 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:51 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:03 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:56 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:08 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:05:56 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:08 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:01 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:13 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:01 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:13 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:06 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:18 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:06 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:18 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:11 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:23 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:11 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:23 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:16 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:28 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:16 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:28 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:21 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:33 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:21 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:33 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:26 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:38 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:31 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:43 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:36 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:48 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
-Jul 04, 2018 2:06:41 AM org.hppcoin.crons.WalletCron$1 run
+Jul 04, 2018 9:30:53 AM org.hppcoin.crons.WalletCron$1 run
 SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:30:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:30:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:43 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:43 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:48 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:48 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:53 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:53 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:31:58 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:32:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:07 AM org.hppcoin.controller.XenServersController$1 run
+SEVERE: null
+Jul 04, 2018 9:32:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:29 AM org.hppcoin.dao.impl.XenServerDaoImpl save
+SEVERE: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY]  A PRIMARY KEY constraint failed (UNIQUE constraint failed: XENSERVER.IP)
+Error Code: 19
+Call: INSERT INTO XENSERVER (IP, CREATIONTIME, DEFAULTSERVER, HOSTNAME, LASTACCESSTIME, PASSWORD, STATUS, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8 parameters bound]
+Query: InsertObjectQuery(org.hppcoin.model.XenServer@774e82dd)
+Jul 04, 2018 9:32:29 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:32:30 AM org.hppcoin.service.XenServerService <init>
+INFO: Success! Session API version is Unknown
+Jul 04, 2018 9:32:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:43 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:43 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:47 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:32:48 AM org.hppcoin.service.XenServerService <init>
+INFO: Success! Session API version is Unknown
+Jul 04, 2018 9:32:48 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:48 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:53 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:53 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:32:58 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:03 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:08 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:13 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:18 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:23 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:28 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:32 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:33:32 AM org.hppcoin.service.XenServerService <init>
+INFO: Success! Session API version is Unknown
+Jul 04, 2018 9:33:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:33 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:38 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:44 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:44 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:49 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:49 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:54 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:54 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:59 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:33:59 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:04 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:04 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:09 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:09 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:14 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:14 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:19 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:19 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:24 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:24 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:29 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:29 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [])
+Jul 04, 2018 9:34:34 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 04, 2018 9:34:34 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 04, 2018 9:34:39 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 04, 2018 9:34:39 AM org.hppcoin.crons.WalletCron$1 run
+SEVERE: RPC Query Failed (method: getbalance, params: [], response code: 500 responseMessage Internal Server Error, response: {"result":null,"error":{"code":-28,"message":"Loading block index..."},"id":"1"}
+
+Jul 04, 2018 9:34:50 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:34:53 AM org.hppcoin.service.XenServerService <init>
+INFO: Success! Session API version is Unknown
+Jul 04, 2018 9:35:16 AM org.hppcoin.service.XenServerService <init>
+INFO: logging in to 'nice.hppcoin.org'...
+Jul 04, 2018 9:35:21 AM org.hppcoin.service.XenServerService <init>
+INFO: Success! Session API version is Unknown

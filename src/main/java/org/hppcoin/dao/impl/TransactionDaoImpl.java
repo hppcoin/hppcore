@@ -213,6 +213,7 @@ public class TransactionDaoImpl implements TransactionDao {
 					em.close();
 					emf.close();
 					new ContractDaoImpl().update(contract, tx);
+					System.out.println(tx.getAddress()+" updated");
 					} 
 				} catch (Exception e) {
 					e.printStackTrace();
