@@ -250,22 +250,22 @@ public class WalletCron {
 				List<HPPTransaction> transactions = txDao.selectAll();
 				int pastCycles = (int) ((new Date().getTime() - contract.getStartDate())
 						/ (contract.getPayementInterval() * 60L * 60L * 1000L))+1;
-				System.out.println("pastCycles= "+pastCycles);
+//				System.out.println("pastCycles= "+pastCycles);
 				if (transactions != null && transactions.size() > 0)
 					for (HPPTransaction trx : transactions)
 						if (trx.getAddress().equals(contract.getRecievingAddress())
 								&& trx.getType().equals(TransactionType.SEND)
 								&& trx.getTime() > (contract.getStartDate() - 5L * 60L * 1000L))
 							reelPaidAmount += trx.getAmount();
-				System.out.println("reelPaidAmount= "+reelPaidAmount);
+//				System.out.println("reelPaidAmount= "+reelPaidAmount);
 				supposedPaidAmount = pastCycles * contract.getCostPerMinute() * 60 * contract.getPayementInterval()
 						+ contract.getSetupPrice();
-				System.out.println("supposedPaidAmount= "+supposedPaidAmount);
+//				System.out.println("supposedPaidAmount= "+supposedPaidAmount);
 				delayedAmount = supposedPaidAmount - reelPaidAmount;
-				System.out.println("delayedAmount= "+delayedAmount);
+//				System.out.println("delayedAmount= "+delayedAmount);
 				delayedPayments = (int) (delayedAmount
 						/ (contract.getCostPerMinute() * 60 * contract.getPayementInterval()));
-				System.out.println("delayedPayments= "+delayedPayments);
+//				System.out.println("delayedPayments= "+delayedPayments);
 				if (delayedPayments > contract.getPayDelay()) {
 					contract.setContractStatus(ContractStatus.SUSPENDED);
 					contractDao.update(contract);
@@ -291,11 +291,11 @@ public class WalletCron {
 				}
 
 				remainingCycles = contract.getDurationHours() / contract.getPayementInterval() - pastCycles;
-				System.out.println("remainingCycles= "+remainingCycles);
+//				System.out.println("remainingCycles= "+remainingCycles);
 				// +1 removed because the first payment is issued upon contract signing
 				timeToToNextPayment = (pastCycles * (contract.getPayementInterval() * 60L * 60L * 1000L))  +contract.getStartDate()
 						- new Date().getTime();
-				System.out.println("timeToToNextPayment= "+timeToToNextPayment);
+//				System.out.println("timeToToNextPayment= "+timeToToNextPayment);
 				if (timeToToNextPayment > 0)
 					try {
 						Thread.sleep(timeToToNextPayment);
@@ -377,7 +377,7 @@ public class WalletCron {
 			case Windows:
 				if ((f = new File(home, "AppData" + File.separatorChar + "Roaming" + File.separatorChar + "hppcoin"
 						+ File.separatorChar + "hppcoin.conf")).exists()) {
-					System.out.println("Windows");
+//					System.out.println("Windows");
 					exist = true;
 				}
 				break;
@@ -385,12 +385,12 @@ public class WalletCron {
 				if ((f = new File(home, "Library/Application Support/hppcoin" + File.separatorChar + "hppcoin.conf"))
 						.exists()) {
 					exist = true;
-					System.out.println("MacOsx");
+//					System.out.println("MacOsx");
 				}
 				break;
 			case Linux:
 				if ((f = new File(home, ".hppcoin" + File.separatorChar + "hppcoin.conf")).exists()) {
-					System.out.println("Linux");
+//					System.out.println("Linux");
 					exist = true;
 				}
 				break;
@@ -412,7 +412,7 @@ public class WalletCron {
 				fw.write("rpcpassword=" + passPart1+passPart2+String.valueOf(new Random().nextLong()));
 				fw.flush();
 				fw.close();
-				System.out.println("hppcoin.conf Created !");
+//				System.out.println("hppcoin.conf Created !");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
