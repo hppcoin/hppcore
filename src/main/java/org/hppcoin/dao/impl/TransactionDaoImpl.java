@@ -65,16 +65,14 @@ public class TransactionDaoImpl implements TransactionDao {
 		try {
 			synchronized (Settings.monitor) {
 			em.getTransaction().begin();
-			if(transaction.getType().equals(TransactionType.RECEIVE))
-			 {	
-				 contract=new ContractDaoImpl().findByAddress(transaction.getAddress());
+			contract=new ContractDaoImpl().findByAddress(transaction.getAddress());
 				
 				if(null!=contract)  {	 
 					em.merge(contract);
 					transaction.setContract(contract);
                     isContracted=true;
 				 }
-			 }
+			 
 			if(exit(transaction.getTxid()))
 			{
 			transaction=em.find(HPPTransaction.class, transaction.getTxid());
