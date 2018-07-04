@@ -249,7 +249,7 @@ public class WalletCron {
 				TransactionDaoImpl txDao = new TransactionDaoImpl();
 				List<HPPTransaction> transactions = txDao.selectAll();
 				int pastCycles = (int) ((new Date().getTime() - contract.getStartDate())
-						/ (contract.getPayementInterval() * 60L * 60L * 1000L));
+						/ (contract.getPayementInterval() * 60L * 60L * 1000L))+1;
 				System.out.println("pastCycles= "+pastCycles);
 				if (transactions != null && transactions.size() > 0)
 					for (HPPTransaction trx : transactions)
@@ -291,9 +291,11 @@ public class WalletCron {
 				}
 
 				remainingCycles = contract.getDurationHours() / contract.getPayementInterval() - pastCycles;
-
-				timeToToNextPayment = ((pastCycles + 1) * (contract.getPayementInterval() * 60L * 60L * 1000L))
+				System.out.println("remainingCycles= "+remainingCycles);
+				// +1 removed because the first payment is issued upon contract signing
+				timeToToNextPayment = (pastCycles * (contract.getPayementInterval() * 60L * 60L * 1000L))  +contract.getStartDate()
 						- new Date().getTime();
+				System.out.println("timeToToNextPayment= "+timeToToNextPayment);
 				if (timeToToNextPayment > 0)
 					try {
 						Thread.sleep(timeToToNextPayment);
