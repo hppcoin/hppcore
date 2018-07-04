@@ -207,14 +207,15 @@ public class TransactionDaoImpl implements TransactionDao {
 					synchronized (Settings.monitor) {
 					em.getTransaction().begin();
 					em.merge(tx);
-					em.merge(contract);
+					contract=em.find(Contract.class, contract.getId());
 					tx.setContract(contract);
-					new ContractDaoImpl().update(contract, tx);
 					em.getTransaction().commit();
 					em.close();
 					emf.close();
+					new ContractDaoImpl().update(contract, tx);
 					} 
 				} catch (Exception e) {
+					e.printStackTrace();
 					LOGGER.severe(e.getMessage());
 
 				}
