@@ -57,6 +57,7 @@ public class TransactionDaoImpl implements TransactionDao {
 
 	@Override
 	public HPPTransaction save(HPPTransaction transaction) {
+		int confirmations=transaction.getConfirmations();
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hppcoin");
 		EntityManager em = emf.createEntityManager();
 		boolean isContracted=false;
@@ -74,8 +75,12 @@ public class TransactionDaoImpl implements TransactionDao {
                     isContracted=true;
 				 }
 			 }
+			if(exit(transaction.getTxid()))
+			{
+			transaction=em.find(HPPTransaction.class, transaction.getTxid());
+			transaction.setConfirmations(confirmations);
+			} 
 			em.merge(transaction);
-			 
 			em.getTransaction().commit();
 			em.close();
 			emf.close();
