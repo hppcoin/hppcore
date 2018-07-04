@@ -250,17 +250,22 @@ public class WalletCron {
 				List<HPPTransaction> transactions = txDao.selectAll();
 				int pastCycles = (int) ((new Date().getTime() - contract.getStartDate())
 						/ (contract.getPayementInterval() * 60L * 60L * 1000L));
+				System.out.println("pastCycles= "+pastCycles);
 				if (transactions != null && transactions.size() > 0)
 					for (HPPTransaction trx : transactions)
 						if (trx.getAddress().equals(contract.getRecievingAddress())
 								&& trx.getType().equals(TransactionType.SEND)
-								&& trx.getTime() > (contract.getStartDate() - 20L * 60L * 1000L))
+								&& trx.getTime() > (contract.getStartDate() - 5L * 60L * 1000L))
 							reelPaidAmount += trx.getAmount();
+				System.out.println("reelPaidAmount= "+reelPaidAmount);
 				supposedPaidAmount = pastCycles * contract.getCostPerMinute() * 60 * contract.getPayementInterval()
 						+ contract.getSetupPrice();
+				System.out.println("supposedPaidAmount= "+supposedPaidAmount);
 				delayedAmount = supposedPaidAmount - reelPaidAmount;
+				System.out.println("delayedAmount= "+delayedAmount);
 				delayedPayments = (int) (delayedAmount
 						/ (contract.getCostPerMinute() * 60 * contract.getPayementInterval()));
+				System.out.println("delayedPayments= "+delayedPayments);
 				if (delayedPayments > contract.getPayDelay()) {
 					contract.setContractStatus(ContractStatus.SUSPENDED);
 					contractDao.update(contract);
